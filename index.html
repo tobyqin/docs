@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>docsify</title>
+  <title>BetaCat Documentation</title>
   <link rel="icon" href="assets/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="keywords" content="doc,docs,documentation">
@@ -28,6 +28,7 @@
 <body>
   <div id="app">Loading ...</div>
   <script>
+    mermaid.initialize({ startOnLoad: true });
     window.$docsify = {
       alias: {
         '/.*/_navbar.md': '/_navbar.md'
@@ -39,7 +40,7 @@
       mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      name: 'betacat-docs',
+      name: 'BetaCat Docs',
       search: {
         noData: {
           '/de-de/': 'Keine Ergebnisse!',
@@ -74,6 +75,9 @@
   <script src="lib/plugins/pagination.min.js"></script>
   <script src="lib/plugins/tabs.js"></script>
   <script src="lib/plugins/zoom-image.min.js"></script>
+  <script src="lib/plugins/mermaid.js"></script>
+  <script src="lib/plugins/docsify-mermaid.js"></script>
+
   <script src="lib/lang/prism-bash.min.js"></script>
   <script src="lib/lang/prism-batch.min.js"></script>
   <script src="lib/lang/prism-docker.min.js"></script>

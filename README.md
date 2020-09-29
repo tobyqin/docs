@@ -28,6 +28,13 @@ echo "Are your kidding me?"
 
 <!-- tabs:end -->
 
+```mermaid
+graph LR
+    程序员 --- 讨厌
+    讨厌-->自己写文档
+    讨厌-->别人不写文档
+```
+
 为什么要写文档呢？因为脑子不太好用了，好记性总归比不过烂笔头。
 
 > 永久链接：<https://tobyqin.cn/docs>
