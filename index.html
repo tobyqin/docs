@@ -9,15 +9,18 @@
   <meta name="keywords" content="doc,docs,documentation">
   <meta name="description" content="A magical documentation generator.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="lib/theme/vue.css" title="vue">
+  <link rel="stylesheet" href="lib/theme/theme-light.css" title="vue">
   <link rel="stylesheet" href="lib/theme/dark.css" title="dark" disabled>
   <style>
-    nav.app-nav li ul {
-      min-width: 100px;
+    :root {
+      /* Reduce the font size */
+      --base-font-size: 16px;
+  
+      /* Change the sidebar bullets */
+      --sidebar-nav-link-before-content: '';
     }
-
-    #carbonads {
-      box-shadow: none !important;
+    #main{
+      width: 100%;
     }
   </style>
 </head>
@@ -53,22 +56,41 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-              url = 'https://github.com/tobyqin/docs/blob/master/' + vm.route.file;
-              var editHtml = '[:memo: Edit Document](' + url + ')\n'
-              return editHtml +
-                html +
-                '\n\n----\n\n' +
-                '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-            })
+            url = 'https://github.com/tobyqin/docs/blob/master/' + vm.route.file;
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            return editHtml +
+              html +
+              '\n\n----\n\n' +
+              '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+          })
         }
       ]
     }
   </script>
   <script src="lib/docsify.min.js"></script>
+  <script src="lib/theme/docsify-themeable.js"></script>
   <script src="lib/plugins/search.min.js"></script>
+  <script src="lib/plugins/copy-code.min.js"></script>
+  <script src="lib/plugins/pagination.min.js"></script>
+  <script src="lib/plugins/tabs.js"></script>
+  <script src="lib/plugins/zoom-image.min.js"></script>
   <script src="lib/lang/prism-bash.min.js"></script>
+  <script src="lib/lang/prism-batch.min.js"></script>
+  <script src="lib/lang/prism-docker.min.js"></script>
+  <script src="lib/lang/prism-git.min.js"></script>
+  <script src="lib/lang/prism-go.min.js"></script>
+  <script src="lib/lang/prism-groovy.min.js"></script>
+  <script src="lib/lang/prism-ini.min.js"></script>
+  <script src="lib/lang/prism-java.min.js"></script>
+  <script src="lib/lang/prism-json.min.js"></script>
   <script src="lib/lang/prism-markdown.min.js"></script>
   <script src="lib/lang/prism-nginx.min.js"></script>
+  <script src="lib/lang/prism-powershell.min.js"></script>
+  <script src="lib/lang/prism-python.min.js"></script>
+  <script src="lib/lang/prism-r.min.js"></script>
+  <script src="lib/lang/prism-sql.min.js"></script>
+  <script src="lib/lang/prism-typescript.min.js"></script>
+  <script src="lib/lang/prism-yaml.min.js"></script>
   <script>
     // todo
   </script>
