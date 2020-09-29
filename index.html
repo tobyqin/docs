@@ -9,17 +9,18 @@
   <meta name="keywords" content="doc,docs,documentation">
   <meta name="description" content="A magical documentation generator.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="lib/theme/theme-light.css" title="vue">
-  <link rel="stylesheet" href="lib/theme/dark.css" title="dark" disabled>
+  <link rel="stylesheet" href="lib/theme/theme-light.css" title="light">
+  <link rel="stylesheet" href="lib/theme/theme-dark.css" title="dark" disabled>
   <style>
     :root {
       /* Reduce the font size */
       --base-font-size: 16px;
-  
+
       /* Change the sidebar bullets */
       --sidebar-nav-link-before-content: '';
     }
-    #main{
+
+    #main {
       width: 100%;
     }
   </style>
@@ -28,7 +29,6 @@
 <body>
   <div id="app">Loading ...</div>
   <script>
-    mermaid.initialize({ startOnLoad: true });
     window.$docsify = {
       alias: {
         '/.*/_navbar.md': '/_navbar.md'
@@ -96,7 +96,30 @@
   <script src="lib/lang/prism-typescript.min.js"></script>
   <script src="lib/lang/prism-yaml.min.js"></script>
   <script>
-    // todo
+    mermaid.initialize({
+      startOnLoad: true
+    });
+
+    var themeKey = 'docsifyTheme'
+    var qString = window.location.href.split('#')[1] || '';
+    var urlParams = new URLSearchParams(qString.substring(1));
+    var theme = urlParams.get('theme');
+    var savedTheme = localStorage.getItem(themeKey);
+
+    if (!savedTheme) {
+      if (!theme) {
+        theme = 'light'
+      }
+      localStorage.setItem(themeKey, theme)
+    } else if (theme) {
+      localStorage.setItem(themeKey, theme)
+    }
+
+    theme = localStorage.getItem(themeKey);
+    var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+    themes.forEach(function (t) {
+      t.disabled = t.title !== theme
+    });
   </script>
 </body>
 
