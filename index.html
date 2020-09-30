@@ -9,8 +9,7 @@
   <meta name="keywords" content="doc,docs,documentation">
   <meta name="description" content="A magical documentation generator.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="lib/theme/theme-light.css" title="light">
-  <link rel="stylesheet" href="lib/theme/theme-dark.css" title="dark" disabled>
+  <link rel="stylesheet" href="lib/theme/theme-light.css" id="light">
   <style>
     :root {
       /* Reduce the font size */
@@ -95,21 +94,23 @@
   <script>
     // do not load some plugins in IE browser as it is not working correctly
     if (!window.document.documentMode) {
-      for (var js of ['search.min', 'mermaid.min', 'docsify-mermaid']) {
+      var libs = ['search.min', 'mermaid.min', 'docsify-mermaid'];
+      for (var i = 0; i < libs.length; i++) {
+        var js = libs[i];
         var searchJs = document.createElement('script');
         searchJs.src = 'lib/plugins/' + js + '.js';
         document.write(searchJs.outerHTML);
       }
     }
 
-    function docReady(fn) {
-      // see if DOM is already available
-      if (document.readyState === "complete" || document.readyState === "interactive") {
-        // call on next available tick
-        setTimeout(fn, 1);
-      } else {
-        document.addEventListener("DOMContentLoaded", fn);
-      }
+    function addCss(fileName, title) {
+      var head = document.head;
+      var link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = fileName;
+      link.id = title;
+      head.appendChild(link);
     }
 
     function setTheme(theme) {
@@ -124,10 +125,10 @@
       }
 
       theme = localStorage.getItem(themeKey);
-      var themes = Docsify.dom.findAll('[rel="stylesheet"]');
-      themes.forEach(function (t) {
-        t.disabled = t.title !== theme
-      });
+      var removed = theme === 'dark' ? 'light' : 'dark';
+      var sheet = document.getElementById(removed);
+      if (sheet) sheet.parentNode.removeChild(sheet);
+      addCss('lib/theme/theme-' + theme + '.css', theme);
     }
 
     var url = window.location.href;
