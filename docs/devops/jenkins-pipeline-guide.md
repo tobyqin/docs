@@ -1,6 +1,8 @@
-# pipeline2020
+# Jenkins 流水线设计指北
 
 Demo of awesome pipeline, using Jenkins shared library to build standardized, reusable and optimized CI/CD pipelines.
+
+本文提供了一种易于扩展，维护和度量的 Jenkins 流水线设计思路，仅供参考，本人不对后果负责。
 
 ## 应用概述
 
