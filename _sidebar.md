@@ -10,5 +10,6 @@
   - [7. Delete the cluster](docs/k8s/steps/7.%20delete%20the%20cluster.md)
 - DevOps Practices
   - [DevOps 基础设施搭建](docs/devops/devops-infra-setup.md)
+  - [Jenkins 流水线设计](docs/devops/jenkins-pipeline-guide.md)
 - Other Docs
   - [Python Web Server](docs/python-server.md)
