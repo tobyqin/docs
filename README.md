@@ -18,6 +18,7 @@ print('2. 别人不写文档')
 
 ```javascript
 console.log("What are you looking for?")
+console.warn("瞅你咋地？");
 ```
 
 #### ** Bash **
