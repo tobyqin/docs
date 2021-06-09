@@ -346,11 +346,11 @@ def call(Map config) {
 
 ### 流水线运行设计
 
-![pipeline-full](./docs/images/pipeline-full.png)
+![pipeline-full](./images/pipeline-full.png)
 
 ### 和 Gitlab MR 集成
 
-![gitlab-Integration](./docs/images/gitlab-integration.png)
+![gitlab-Integration](./images/gitlab-integration.png)
 
 ### 声明
 
