@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>BetaCat's Dogs</title>
+  <title>Toby's Dogs</title>
   <link rel="icon" href="favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="keywords" content="doc,docs,documentation">
@@ -39,7 +39,7 @@
       mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      name: 'BetaCat\'s Dogs',
+      name: 'Toby\'s Dogs',
       search: {
         noData: {
           '/de-de/': 'Keine Ergebnisse!',
@@ -57,11 +57,9 @@
         function (hook, vm) {
           hook.beforeEach(function (html) {
             url = 'https://github.com/tobyqin/docs/blob/master/' + vm.route.file;
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            var editHtml = '[:memo: Edit Document](' + url + ')\n\n'
             return editHtml +
-              html +
-              '\n\n----\n\n' +
-              '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+              html
           })
         }
       ]
