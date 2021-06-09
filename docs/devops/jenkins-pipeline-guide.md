@@ -1,4 +1,4 @@
-# Jenkins 流水线设计指北
+# Jenkins 流水线设计
 
 Demo of awesome pipeline, using Jenkins shared library to build standardized, reusable and optimized CI/CD pipelines.
 
