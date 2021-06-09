@@ -1,7 +1,6 @@
 - Kubernetes
-  - [Hello Kubernetes](hello-k8s.md)
+  - [Hello Kubernetes](docs/hello-k8s.md)
 - DevOps Pipeline 2020
-  - [DevOps 基础设施搭建](docs/devops-infra-setup.md) 
+  - [DevOps 基础设施搭建](docs/devops-infra-setup.md)
 - Other Docs
   - [Python Web Server](docs/python-server.md)
-
