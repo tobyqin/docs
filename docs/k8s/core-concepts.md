@@ -1,6 +1,6 @@
 In this page, we will introduce core concepts in k8s.
 
-**`Kubernetes` is a container orchestration platform.** What does that mean? Think about Google, and the incredible scale they need to support and deploy on their systems.
+**`Kubernetes` is a container orchestration platform.** What does that mean? Think about Google, and the incredible scale they need to support and deploy on their systems, most of their applications are `containerized`, they will need platform to orchestrate (编排) those containers(容器).
 
 ## Container
 
