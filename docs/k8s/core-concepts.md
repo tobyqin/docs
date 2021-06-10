@@ -74,6 +74,12 @@ Inside of a node, you have one or more pods. Pods are the deployable units in Ku
 
 ![pod design](images/pod-design.png ':size=600')
 
+## Job
+
+A `Job` creates one or more Pods and will continue to retry execution of the Pods until a specified number of them successfully terminate. As pods successfully complete, the Job tracks the successful completions.
+
+One `CronJob` object is like one line of a `crontab` (cron table) file. It runs a job periodically on a given schedule, written in `Cron` format.
+
 ## ReplicaSet
 
 ![ReplicaSet](images/replica-set.png ':size=600')
