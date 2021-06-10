@@ -1,4 +1,5 @@
 - Kubernetes
+  - [Core concepts](docs/k8s/core-concepts.md)
   - [Hello Kubernetes](docs/hello-k8s.md)
     - [0. Setup cluster](docs/k8s/steps/0.%20setup%20cluster.md)
     - [1. Install tools](docs/k8s/steps/1.%20install%20tools.md)
