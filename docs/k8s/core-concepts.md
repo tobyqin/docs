@@ -68,7 +68,7 @@ Inside of a node, you have one or more pods. Pods are the deployable units in Ku
 
 **Pod lifecycle**
 
-![pod lifecycle](images/pod-pod-lifecycle.png ':size=600')
+![pod lifecycle](images/pod-lifecycle.png ':size=600')
 
 **Pod design pattern**
 
