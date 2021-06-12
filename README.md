@@ -10,15 +10,15 @@
 
 ```python
 print('程序员最讨厌两件事')
-print('1. 自己写文档')  
+print('1. 自己写文档')
 print('2. 别人不写文档')
 ```
 
 #### ** JavaScript **
 
 ```javascript
-console.log("What are you looking for?")
-console.warn("瞅你咋地？");
+console.log('What are you looking for?')
+console.warn('瞅你咋地？')
 ```
 
 #### ** Bash **
@@ -41,5 +41,7 @@ graph LR
 > 永久链接：<https://tobyqin.cn/docs>
 >
 > 备用链接：<https://tobyqin.github.io/docs>
+>
+> 备用链接 2： https://gitee.com/tobyqin/docs
 
 转载内容请注明出处，谢谢。
