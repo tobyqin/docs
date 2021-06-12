@@ -1,5 +1,5 @@
 - [我的博客](https://tobyqin.cn/)
-- [一些工具](docs/links.md)
+- [一些工具](links.md)
 - [跟我跟到 GitHub](https://github.com/tobyqin)
 - [切换主题](?)
 <ul>
