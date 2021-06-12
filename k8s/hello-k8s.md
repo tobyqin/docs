@@ -6,7 +6,9 @@ A hello world guide to play with k8s.
 
 My name is Toby Qin, I am a DevOps engineer works with containerization technology everyday. I had passed my [Certified kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam few weeks ago. I create this repo to guide newbies hit their road to cloud.
 
-Welcome follow me on [github](https://github.com/tobyqin).
+![ckad](images/ckad.png)
+
+Welcome to follow me on [github](https://github.com/tobyqin).
 
 ## Introducing kubernetes
 
@@ -99,6 +101,19 @@ If you want to learn more, I would recommend you go to the official document sit
 - https://kubernetes.io/docs/tasks/job/
 
 You may try more tasks at https://kubernetes.io/docs/tasks/
+
+## Tasks designed by me
+
+  - [0. Setup cluster](steps/0.%20setup%20cluster.md)
+  - [1. Install tools](steps/1.%20install%20tools.md)
+  - [2. Manage cluster](steps/2.%20manage%20a%20cluster.md)
+  - [3. Work in namespace](steps/3.%20work%20in%20namespace.md)
+  - [4. Work with Docker](steps/4.%20work%20with%20docker.md)
+  - [5. Run a Pod](steps/5.%20run%20a%20pod.md)
+  - [6. Run a Job](steps/6.%20run%20a%20job.md)
+  - [7. Deploy an app](steps/7.%20deploy%20an%20app.md)
+  - [8. Expose an app](steps/8.%20expose%20an%20app.md)
+  - [9. Delete resources](steps/9.%20delete%20resources.md)
 
 Happy coding!
 
