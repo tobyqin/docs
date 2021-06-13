@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kitty-ingress
+spec:
+  defaultBackend:
+    service:
+      name: kitty-service
+      port:
+        number: 80

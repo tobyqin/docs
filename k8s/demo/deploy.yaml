@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kitty-deployment
+  labels:
+    app: kitty
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kitty
+  template:
+    metadata:
+      labels:
+        app: kitty
+    spec:
+      containers:
+        - name: hello
+          image: tobyqin/hello
+          envFrom:
+            - configMapRef:
+                name: app-config
+          ports:
+            - containerPort: 5000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5000
+              scheme: HTTP
+            periodSeconds: 15
+            failureThreshold: 5
+            timeoutSeconds: 1
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 15
+            successThreshold: 1
+            failureThreshold: 3
+            timeoutSeconds: 1

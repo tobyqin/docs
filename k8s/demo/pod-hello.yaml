@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+spec:
+  containers:
+    - name: hello
+      image: tobyqin/hello
+      env:
+        - name: NAME
+          value: 'Toby Qin'
+        - name: MESSAGE
+          value: 'Kitty'

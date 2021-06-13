@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kitty-service
+spec:
+  selector:
+    app: kitty
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000

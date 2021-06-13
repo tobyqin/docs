@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  NAME: Toby Qin
+  MESSAGE: Doggy
+  IMAGE: 'https://tobyqin.cn/docs/assets/dog.png'
+kind: ConfigMap
+metadata:
+  name: app-config
