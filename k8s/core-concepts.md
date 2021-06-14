@@ -94,13 +94,13 @@ Manages the lifecycle of a ReplicaSet.
 
 ## Service
 
-![service](images/service.png)
+![service](images/service.png ':size=600')
 
 A service gives you one entry point into a variable number of pods. Services can be exposed outside the cluster through an external LoadBalancer. All public cloud managed Kubernetes services automate the creation of native load balancers for your services.
 
 ## Persistent Volume
 
-![Persistent volume](images/pv.png)
+![Persistent volume](images/pv.png ':size=600')
 
 A `PersistentVolume` (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes.
 
