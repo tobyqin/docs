@@ -10,6 +10,15 @@ My name is Toby Qin, I am a DevOps engineer works with containerization technolo
 
 Welcome to follow me on [github](https://github.com/tobyqin).
 
+## Video recording
+
+![workshop](images/workshop-intro.png)
+
+针对Workshop设计的所有任务，我专门录制了操作视频，欢迎通过以下链接访问获得。
+
+- [Bilibili](https://www.bilibili.com/video/BV1UK4y137BV/)
+- [YouTube](https://youtu.be/Nzee55a1BLs)
+
 ## Introducing kubernetes
 
 - https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
@@ -59,23 +68,23 @@ Now edit `~/.kube/config` with your cluster info, for example:
 ```yaml
 apiVersion: v1
 clusters:
-- cluster:
-    certificate-authority-data: LS0tLS1C...
-    server: https://kubernetes.docker.internal:6443
-  name: docker-desktop
+  - cluster:
+      certificate-authority-data: LS0tLS1C...
+      server: https://kubernetes.docker.internal:6443
+    name: docker-desktop
 contexts:
-- context:
-    cluster: docker-desktop
-    user: docker-desktop
-  name: docker-desktop
+  - context:
+      cluster: docker-desktop
+      user: docker-desktop
+    name: docker-desktop
 current-context: docker-desktop
 kind: Config
 preferences: {}
 users:
-- name: docker-desktop
-  user:
-    client-certificate-data: LS0tLS1CRUdJT...
-    client-key-data: LS0tLS1CRUdJTi...
+  - name: docker-desktop
+    user:
+      client-certificate-data: LS0tLS1CRUdJT...
+      client-key-data: LS0tLS1CRUdJTi...
 ```
 
 ### Tips: speed up `kubectl` command
@@ -104,16 +113,15 @@ You may try more tasks at https://kubernetes.io/docs/tasks/
 
 ## Tasks designed by me
 
-  - [0. Setup cluster](k8s/steps/0.%20setup%20cluster.md)
-  - [1. Install tools](k8s/steps/1.%20install%20tools.md)
-  - [2. Manage cluster](k8s/steps/2.%20manage%20a%20cluster.md)
-  - [3. Work in namespace](k8s/steps/3.%20work%20in%20namespace.md)
-  - [4. Work with Docker](k8s/steps/4.%20work%20with%20docker.md)
-  - [5. Run a Pod](k8s/steps/5.%20run%20a%20pod.md)
-  - [6. Run a Job](k8s/steps/6.%20run%20a%20job.md)
-  - [7. Deploy an app](k8s/steps/7.%20deploy%20an%20app.md)
-  - [8. Expose an app](k8s/steps/8.%20expose%20an%20app.md)
-  - [9. Delete resources](k8s/steps/9.%20delete%20resources.md)
+- [0. Setup cluster](k8s/steps/0.%20setup%20cluster.md)
+- [1. Install tools](k8s/steps/1.%20install%20tools.md)
+- [2. Manage cluster](k8s/steps/2.%20manage%20a%20cluster.md)
+- [3. Work in namespace](k8s/steps/3.%20work%20in%20namespace.md)
+- [4. Work with Docker](k8s/steps/4.%20work%20with%20docker.md)
+- [5. Run a Pod](k8s/steps/5.%20run%20a%20pod.md)
+- [6. Run a Job](k8s/steps/6.%20run%20a%20job.md)
+- [7. Deploy an app](k8s/steps/7.%20deploy%20an%20app.md)
+- [8. Expose an app](k8s/steps/8.%20expose%20an%20app.md)
+- [9. Delete resources](k8s/steps/9.%20delete%20resources.md)
 
 Happy coding!
-
