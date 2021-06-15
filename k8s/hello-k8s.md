@@ -4,7 +4,7 @@ A hello world guide to play with k8s.
 
 ## About author
 
-My name is Toby Qin, I am a DevOps engineer works with containerization technology everyday. I had passed my [Certified kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam few weeks ago. I create this repo to guide newbies hit their road to cloud.
+My name is Toby Qin, I am a DevOps engineer working with containerization technology everyday. I had passed my [Certified kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam few weeks ago. I create this repo to guide newbies hit their road to cloud.
 
 ![ckad](images/ckad.png ':size=600')
 
