@@ -1,4 +1,5 @@
 - Kubernetes
+
   - [Core concepts](k8s/core-concepts.md)
   - [Hello Kubernetes](k8s/hello-k8s.md)
     - [0. Setup cluster](k8s/steps/0.%20setup%20cluster.md)
@@ -11,12 +12,16 @@
     - [7. Deploy an app](k8s/steps/7.%20deploy%20an%20app.md)
     - [8. Expose an app](k8s/steps/8.%20expose%20an%20app.md)
     - [9. Delete resources](k8s/steps/9.%20delete%20resources.md)
+
 - Learn Python
 
   - [Python fundamental](python/1.python-fundamental.md)
 
 - DevOps Practices
+
   - [DevOps 基础设施](devops/devops-infra-setup.md)
   - [Jenkins 流水线设计](devops/jenkins-pipeline-guide.md)
+
 - Other Docs
   - [Python Web Server](other/python-server.md)
+  - [我们在招人](devops/we-are-hiring.md)
