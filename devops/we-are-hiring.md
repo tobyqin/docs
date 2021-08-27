@@ -1,5 +1,7 @@
 # We are hiring - GSP DevOps (Citi)
 
+> Shanghai, 30~40k，15 天以上带薪年假，1 个月陪产假，3 年落户政策，房贷贴息，更多福利细节欢迎私信
+
 Citi’s Global Spread Products (GSP) Business is part of the greater Global Markets and Securities Services division of Citi’s Institutional Clients Group.
 
 As a DevOps engineer in GSP, you will be part of the team building our next generation infrastructure and DevOps toolset for exciting new technologies that shape the future.
@@ -67,4 +69,4 @@ DevOps & infrastructure team plays a critical role in this journey, You will wor
 - 有安全扫描工具使用经验，例如 Fortify, BlackDuck and Checkmarx
 - 有 Kubernetes，AWS，SRE 等相关认证证书
 
-> 有意者欢迎来电垂询，内推将助你一臂之力。
+> 欢迎他荐或者自荐，我（`dG9ieS5xaW5AbGl2ZS5jb20=`）将用内推将助你一臂之力。
