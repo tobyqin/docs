@@ -1,6 +1,6 @@
 # We are hiring - GSP DevOps (Citi)
 
-> Shanghai, 30~40k，15 天以上带薪年假，1 个月陪产假，3 年落户政策，房贷贴息，更多福利细节欢迎私信
+> 坐标上海, 15 天以上带薪年假，1 个月陪产假，3 年落户政策，房贷贴息，薪资按能力和老板谈，空间很大，更多福利细节欢迎私信
 
 Citi’s Global Spread Products (GSP) Business is part of the greater Global Markets and Securities Services division of Citi’s Institutional Clients Group.
 
