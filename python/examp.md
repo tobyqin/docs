@@ -247,7 +247,7 @@ if __name__ == '__main__':
     print('恭喜您集成五福！！！')
 
 
-# fu.py
+# wufu.py
 from JiFu import Ji_Fu,fus,five_blessings
 
 print('——————开始集福啦——————')
