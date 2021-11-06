@@ -1,5 +1,7 @@
 # Python Workshop Exam
 
+?> 悄悄滴进村，打枪的不要。
+
 ## 1. height 
 
 考察基本语法。
