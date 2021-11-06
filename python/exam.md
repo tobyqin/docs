@@ -1,6 +1,8 @@
 # Python Workshop Exam
 
-## height 
+## 1. height 
+
+考察基本语法。
 
 ```python
 father_height = input('请输入父亲的身高：\n')
@@ -10,7 +12,9 @@ print('预测儿子身高为：')
 print(kid_height)
 ```
 
-## guess
+## 2. guess
+
+考察控制流。
 
 ```python
 import random
@@ -39,7 +43,9 @@ if user_input == answer:
 print('——————游戏结束——————')
 ```
 
-## idcard
+## 3. idcard
+
+考察日期类型和切片。
 
 ```python
 print('——————身份证信息——————')
@@ -60,7 +66,7 @@ print('您的性别是：')
 print(gender)
 ```
 
-## future
+## 4. future
 
 ```python
 import re
@@ -84,7 +90,44 @@ print('未来是：')
 print(get_date_str(future_day))
 ```
 
-## game
+
+## 5. book
+
+考察数据库应用。
+
+```python
+import mysql.connector
+
+db_config = {
+    'username': 'root',
+    'password': '',
+    'database': 'BookDB',
+    'use_unicode': True,
+    'charset': 'utf8'
+}
+
+
+def db_query(config, sql):
+    conn = mysql.connector.connect(**config)
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    conn.close()
+    return result
+
+
+if __name__ == '__main__':
+    sql = 'select name,price,date from book'
+    result = db_query(db_config, sql)
+    for name, price, date in result:
+        date = date.strftime('%Y-%m-%d')
+        print(f'图书：《{name}》，价格：¥{price}元，出版日期：{date}')
+
+```
+
+## 6. game
+
+考察面向对象设计。
 
 ```python
 class Person():
@@ -126,39 +169,9 @@ if __name__ == '__main__':
     ll.print_info()
 ```
 
-## book
+## 7. lottery
 
-```python
-import mysql.connector
-
-db_config = {
-    'username': 'root',
-    'password': '',
-    'database': 'BookDB',
-    'use_unicode': True,
-    'charset': 'utf8'
-}
-
-
-def db_query(config, sql):
-    conn = mysql.connector.connect(**config)
-    cursor = conn.cursor()
-    cursor.execute(sql)
-    result = cursor.fetchall()
-    conn.close()
-    return result
-
-
-if __name__ == '__main__':
-    sql = 'select name,price,date from book'
-    result = db_query(db_config, sql)
-    for name, price, date in result:
-        date = date.strftime('%Y-%m-%d')
-        print(f'图书：《{name}》，价格：¥{price}元，出版日期：{date}')
-
-```
-
-## lottery
+考察内置包和逻辑算法。
 
 ```python
 # MyModular.__init__.py
@@ -189,7 +202,9 @@ Great_lotter(n)
 
 ```
 
-## blessing
+## 8. blessing
+
+考察模块调用和数据结构。
 
 ```python
 # JiFu.__init__.py
