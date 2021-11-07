@@ -277,3 +277,6 @@ while not five_blessings():
 
 print('恭喜您集成五福！！！')
 ```
+
+## 9. tax
+
