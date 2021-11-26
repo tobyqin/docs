@@ -76,12 +76,10 @@ print(gender)
 import re
 from datetime import datetime, timedelta
 
-
 def get_date_str(d):
     year, month, day = re.search(r'(\d{4})-(\d{2})-(\d{2})', str(d)).groups()
     weekday = d.strftime('%A')
     return f'{year}年{month}月{day}日 {weekday}'
-
 
 print('——————未来星期几——————')
 now = datetime.now()
@@ -110,7 +108,6 @@ db_config = {
     'charset': 'utf8'
 }
 
-
 def db_query(config, sql):
     conn = mysql.connector.connect(**config)
     cursor = conn.cursor()
@@ -118,7 +115,6 @@ def db_query(config, sql):
     result = cursor.fetchall()
     conn.close()
     return result
-
 
 if __name__ == '__main__':
     sql = 'select name,price,date from book'
@@ -154,7 +150,6 @@ class Person():
         print(f'{self.name} {action["message"]}')
         self.capacity = self.capacity + action['power']
 
-
 if __name__ == '__main__':
     print('——————游戏初始——————')
     bb = Person('冰冰', '女', 18, 1000)
@@ -184,7 +179,6 @@ def Great_lotter(count):
     for i in range(count):
         print(_generate_lotter())
 
-
 def _generate_lotter():
     lotter = random.sample(range(1, 36), 5)
     check = random.sample(range(1, 13), 2)
@@ -202,7 +196,6 @@ n = input('请输入要生成的大乐透号码注数：')
 n = int(n)
 
 Great_lotter(n)
-
 ```
 
 ## 8. blessing
@@ -229,12 +222,10 @@ my_blessings = {
     '敬业福': 0,
 }
 
-
 def add_fu(fu):
     for k, v in my_blessings.items():
         if k == fu:
             my_blessings[k] = v + 1
-
 
 def Ji_Fu():
     input('\n按下<Enter>键获取五福')
@@ -243,22 +234,18 @@ def Ji_Fu():
     print(f'获取到：{fu}')
     add_fu(fu)
 
-
 def fus():
     print('当前拥有的福：')
     out = [f'{k}: {v}' for k, v in my_blessings.items()]
     print(' '.join(out))
 
-
 def five_blessings():
     return all(my_blessings.values())
-
 
 # wufu.py
 from JiFu import Ji_Fu,fus,five_blessings
 
 print('——————开始集福啦——————')
-
 while not five_blessings():
     Ji_Fu()
     fus()
@@ -272,8 +259,8 @@ print('恭喜您集成五福！！！')
 
 ```python
 # tax.__init__.py
-import numpy as np
 import sys
+import numpy as np
 
 data = np.array([
     ['养老保险', 0.08],
@@ -287,7 +274,6 @@ def insurance(salary):
     for x in data:
         value += salary * float(x[1])
     return value if value <= 7662 else 7662
-
 
 def tax(salary):
     salary = salary
@@ -311,7 +297,6 @@ def tax(salary):
         tax = taxable * 0.45 - 13505
 
     return round(tax, 2)
-
 
 # taxcal.py
 from tax import tax
