@@ -126,7 +126,6 @@ if __name__ == '__main__':
     for name, price, date in result:
         date = date.strftime('%Y-%m-%d')
         print(f'图书：《{name}》，价格：¥{price}元，出版日期：{date}')
-
 ```
 
 ## 6. game
@@ -255,17 +254,6 @@ def five_blessings():
     return all(my_blessings.values())
 
 
-if __name__ == '__main__':
-
-    print('——————开始集福啦——————')
-
-    while not five_blessings():
-        Ji_Fu()
-        fus()
-
-    print('恭喜您集成五福！！！')
-
-
 # wufu.py
 from JiFu import Ji_Fu,fus,five_blessings
 
@@ -280,3 +268,55 @@ print('恭喜您集成五福！！！')
 
 ## 9. tax
 
+考察模块封装和条件分支，算术运算。
+
+```python
+# tax/__init__.py
+import numpy as np
+import sys
+
+data = np.array([
+    ['养老保险', 0.08],
+    ['医疗保险', 0.02],
+    ['失业保险', 0.005],
+    ['住房公积金', 0.12],
+])
+
+def insurance(salary):
+    value = 0
+    for x in data:
+        value += salary * float(x[1])
+    return value if value <= 7662 else 7662
+
+
+def tax(salary):
+    salary = salary
+    taxable = salary - insurance(salary) - 3500
+
+    if taxable <= 0:
+        tax = 0
+    elif taxable <= 1500:
+        tax = taxable * 0.03 - 0
+    elif taxable <= 4500:
+        tax = taxable * 0.1 - 105
+    elif taxable <= 9000:
+        tax = taxable * 0.2 - 555
+    elif taxable <= 35000:
+        tax = taxable * 0.25 - 1005
+    elif taxable <= 55000:
+        tax = taxable * 0.3 - 2002
+    elif taxable <= 80000:
+        tax = taxable * 0.35 - 5505
+    else:
+        tax = taxable * 0.45 - 13505
+
+    return round(tax, 2)
+
+
+# taxcal.py
+from tax import tax
+
+salary = input('请输入月收入: ')
+value = tax(int(salary))
+print(f'应纳个人所得税税额为：{value}')
+```
