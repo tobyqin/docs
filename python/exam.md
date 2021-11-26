@@ -271,7 +271,7 @@ print('恭喜您集成五福！！！')
 考察模块封装和条件分支，算术运算。
 
 ```python
-# tax/__init__.py
+# tax.__init__.py
 import numpy as np
 import sys
 
