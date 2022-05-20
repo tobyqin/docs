@@ -24,4 +24,4 @@
 
 - Other Docs
   - [Python Web Server](other/python-server.md)
-  - [我们在招人](devops/we-are-hiring.md)
+  - [我们在招人](jobs/we-are-hiring.md)
