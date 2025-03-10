@@ -47,7 +47,3 @@
 
   - [DevOps 基础设施](devops/devops-infra-setup.md)
   - [Jenkins 流水线设计](devops/jenkins-pipeline-guide.md)
-
-- Other Docs
-  - [Python Web Server](other/python-server.md)
-  - [我们在招人](jobs/we-are-hiring.md)
