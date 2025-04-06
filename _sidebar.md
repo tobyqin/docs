@@ -17,11 +17,33 @@
 
   - [Python fundamental](python/1.python-fundamental.md)
 
+- Learn Go
+
+  - [开始学习 Go](learn-go/00_开始学习Go.md)
+  - [Go基础](learn-go/01_Go基础.md)
+  - [Go类型系统](learn-go/02_Go类型系统.md)
+  - [Go的独特特性](learn-go/03_Go的独特特性.md)
+  - [Go中的面向对象编程](learn-go/04_Go中的面向对象编程.md)
+  - [标准库和生态系统](learn-go/05_标准库和生态系统.md)
+  - [实践项目](learn-go/06_实践项目.md)
+  - [高级主题](learn-go/07_高级主题.md)
+  - [常见问题和错误](learn-go/08_常见问题和错误.md)
+  - [Go语言设计原则与最佳实践](learn-go/09_Go语言设计原则与最佳实践.md)
+  - [Go生态系统与社区资源](learn-go/10_Go生态系统与社区资源.md)
+
+- Learn CSS
+
+  - [CSS学习指南](learn-css/00_CSS学习指南.md)
+  - [CSS基础概念](learn-css/01_CSS基础概念.md)
+  - [CSS布局技术](learn-css/02_CSS布局技术.md)
+  - [CSS样式与效果](learn-css/03_CSS样式与效果.md)
+  - [Sass基础](learn-css/04_Sass基础.md)
+  - [Sass核心功能](learn-css/05_Sass核心功能.md)
+  - [Sass高级特性](learn-css/06_Sass高级特性.md)
+  - [实用技巧与模式](learn-css/07_实用技巧与模式.md)
+  - [项目实战_基础](learn-css/08_项目实战_基础.md)
+
 - DevOps Practices
 
   - [DevOps 基础设施](devops/devops-infra-setup.md)
   - [Jenkins 流水线设计](devops/jenkins-pipeline-guide.md)
-
-- Other Docs
-  - [Python Web Server](other/python-server.md)
-  - [我们在招人](devops/we-are-hiring.md)
