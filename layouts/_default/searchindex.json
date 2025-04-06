@@ -1,0 +1,9 @@
+[
+  {{- range .Pages -}}
+  {
+    "title": {{ .Title | jsonify }},
+    "url": {{ .Permalink | jsonify }},
+    "summary": {{ .Summary | jsonify }}
+  }{{ if not (last .) }},{{ end }}
+  {{- end -}}
+]

@@ -36,3 +36,7 @@ github = "tobyqin"
 # Search configuration
 [params.search]
 enable = true
+
+[params.theme]
+default = "system"
+displayToggle = true
