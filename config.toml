@@ -1,0 +1,8 @@
+baseURL = 'https://tobyqin.github.io/docs/'
+languageCode = 'en-us'
+title = "Toby's Docs"
+theme = 'hextra'
+
+[params]
+  description = "Documentation and notes by Toby Qin"
+  author = "Toby Qin"
