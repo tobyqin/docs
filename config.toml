@@ -1,6 +1,6 @@
 baseURL = 'https://tobyqin.github.io/docs/'
 languageCode = 'en-us'
-title = "Toby's Docs"
+title = "Toby's Documentation"
 theme = 'hextra'
 
 [params]

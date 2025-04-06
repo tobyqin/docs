@@ -1,9 +1,7 @@
 ---
-title: Documentation
+title: Never stop learning
 layout: docs
 ---
-
-# Documentation
 
 Welcome to my documentation collection. Here you'll find various guides, tutorials and notes about:
 
