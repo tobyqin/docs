@@ -1,3 +1,9 @@
+---
+title: Manage Cluster
+type: docs
+weight: 3
+---
+
 ?> In this task, we will warm up ourselves with `kubectl`, try to play with some basic commands.
 
 ## Basic commands

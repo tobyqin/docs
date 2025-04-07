@@ -1,3 +1,9 @@
+---
+title: Delete Resources
+type: docs
+weight: 9
+---
+
 ?> In this task, we will learn how to clean up k8s resources and objects.
 
 > Tips: Search `delete` in https://kubernetes.io/docs/reference/kubectl/cheatsheet/

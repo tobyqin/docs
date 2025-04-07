@@ -1,3 +1,9 @@
+---
+title: Work in Namespace
+type: docs
+weight: 4
+---
+
 ?> In this task, we will create namespace and set it up to current context.
 
 ## Commands

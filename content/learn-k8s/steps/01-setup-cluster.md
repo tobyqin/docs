@@ -1,5 +1,10 @@
+---
+title: Setup Cluster
+type: docs
+weight: 1
+---
 
-> In this task, we will setup a k8s cluster, see https://kubernetes.io/docs/tutorials/
+?> In this task, we will setup a k8s cluster, see https://kubernetes.io/docs/tutorials/
 
 Tips: you should always keep a doc window opened to learn k8s, it is the best resource you should use.
 

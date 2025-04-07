@@ -1,4 +1,12 @@
-?> In this task we will install `kubectl` to connect to the cluster, see https://kubernetes.io/docs/tasks/tools/
+---
+type: docs
+title: Install Tools
+weight: 2
+---
+
+{{% callout note %}}
+In this task we will install `kubectl` to connect to the cluster, see https://kubernetes.io/docs/tasks/tools/
+{{% /callout %}}
 
 ## Windows
 

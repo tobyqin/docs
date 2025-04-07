@@ -1,6 +1,8 @@
 # Python Workshop Exam
 
-?> 悄悄滴进村，打枪的不要。
+{{% callout note %}}
+悄悄滴进村，打枪的不要。
+{{% /callout %}}
 
 ## 1. height 
 
