@@ -1,12 +1,15 @@
-# 06_实践项目
+---
+type: docs
+title: "实践项目"
+---
 
-本章节将通过实际项目示例，帮助您将Go的理论知识应用到实践中，并与Python、Java和C#中的类似实现进行比较。
+本章节将通过实际项目示例，帮助您将 Go 的理论知识应用到实践中，并与 Python、Java 和 C#中的类似实现进行比较。
 
 ## 命令行应用
 
-### 在Go中构建命令行工具
+### 在 Go 中构建命令行工具
 
-Go非常适合构建高性能的命令行工具，标准库提供了强大的支持，同时也有优秀的第三方库如`cobra`和`urfave/cli`。
+Go 非常适合构建高性能的命令行工具，标准库提供了强大的支持，同时也有优秀的第三方库如`cobra`和`urfave/cli`。
 
 #### 基本命令行应用示例
 
@@ -45,9 +48,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--name", default="World", help="名称")
     parser.add_argument("--times", type=int, default=1, help="重复次数")
-    
+
     args = parser.parse_args()
-    
+
     for i in range(args.times):
         print(f"Hello, {args.name}!")
 
@@ -71,13 +74,13 @@ public class HelloApp {
                 .type(Number.class)
                 .desc("重复次数")
                 .build());
-                
+
         CommandLineParser parser = new DefaultParser();
         try {
             CommandLine cmd = parser.parse(options, args);
             String name = cmd.getOptionValue("name", "World");
             int times = Integer.parseInt(cmd.getOptionValue("times", "1"));
-            
+
             for (int i = 0; i < times; i++) {
                 System.out.println("Hello, " + name + "!");
             }
@@ -96,7 +99,7 @@ using CommandLine;
 class Options {
     [Option('n', "name", Default = "World", HelpText = "名称")]
     public string Name { get; set; }
-    
+
     [Option('t', "times", Default = 1, HelpText = "重复次数")]
     public int Times { get; set; }
 }
@@ -113,9 +116,9 @@ class Program {
 }
 ```
 
-### 使用第三方库构建更复杂的CLI
+### 使用第三方库构建更复杂的 CLI
 
-对于更复杂的命令行应用，Go中的`cobra`库是一个流行选择：
+对于更复杂的命令行应用，Go 中的`cobra`库是一个流行选择：
 
 ```go
 package main
@@ -159,13 +162,13 @@ func main() {
 }
 ```
 
-## Web服务
+## Web 服务
 
-### RESTful API开发
+### RESTful API 开发
 
-Go的标准库`net/http`提供了强大的Web服务开发能力，同时也有许多流行的Web框架如Gin、Echo等。
+Go 的标准库`net/http`提供了强大的 Web 服务开发能力，同时也有许多流行的 Web 框架如 Gin、Echo 等。
 
-#### 基本HTTP服务器
+#### 基本 HTTP 服务器
 
 ```go
 // Go实现
@@ -199,7 +202,7 @@ func main() {
 }
 ```
 
-#### 使用Gin框架
+#### 使用 Gin 框架
 
 ```go
 package main
@@ -277,17 +280,17 @@ if __name__ == '__main__':
 // Java (Spring Boot)
 @RestController
 public class UserController {
-    
+
     private List<User> users = new ArrayList<>(Arrays.asList(
         new User(1, "Alice"),
         new User(2, "Bob")
     ));
-    
+
     @GetMapping("/users")
     public List<User> getUsers() {
         return users;
     }
-    
+
     @PostMapping("/users")
     @ResponseStatus(HttpStatus.CREATED)
     public User createUser(@RequestBody User user) {
@@ -316,13 +319,13 @@ public class UsersController : ControllerBase
         new User { Id = 1, Name = "Alice" },
         new User { Id = 2, Name = "Bob" }
     };
-    
+
     [HttpGet]
     public ActionResult<IEnumerable<User>> Get()
     {
         return _users;
     }
-    
+
     [HttpPost]
     public ActionResult<User> Post(User user)
     {
@@ -450,3 +453,4 @@ func main() {
 	defer rows.Close()
 
 	var users []
+```

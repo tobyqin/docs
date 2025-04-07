@@ -1,4 +1,7 @@
-# 04_Go中的面向对象编程
+---
+type: docs
+title: "Go语言中的面向对象编程"
+---
 
 ## 结构体和方法 vs. 类
 
@@ -36,10 +39,10 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    
+
     def greet(self):
         return f"你好，我是{self.name}，今年{self.age}岁"
-    
+
     def birthday(self):
         self.age += 1
 
@@ -55,20 +58,20 @@ print(p.age)      # 输出：31
 public class Person {
     private String name;
     private int age;
-    
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    
+
     public String greet() {
         return String.format("你好，我是%s，今年%d岁", name, age);
     }
-    
+
     public void birthday() {
         age++;
     }
-    
+
     public int getAge() {
         return age;
     }
@@ -87,18 +90,18 @@ public class Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
-    
+
     public Person(string name, int age)
     {
         Name = name;
         Age = age;
     }
-    
+
     public string Greet()
     {
         return $"你好，我是{Name}，今年{Age}岁";
     }
-    
+
     public void Birthday()
     {
         Age++;
@@ -197,14 +200,14 @@ class Speaker(ABC):
 class Person(Speaker):
     def __init__(self, name):
         self.name = name
-    
+
     def speak(self):
         return f"{self.name}说：你好！"
 
 class Dog(Speaker):
     def __init__(self, name):
         self.name = name
-    
+
     def speak(self):
         return f"{self.name}说：汪汪！"
 
@@ -223,7 +226,7 @@ say_something(d)  # 输出：旺财说：汪汪！
 class Cat:
     def __init__(self, name):
         self.name = name
-    
+
     def speak(self):
         return f"{self.name}说：喵喵！"
 
@@ -239,11 +242,11 @@ public interface Speaker {
 
 public class Person implements Speaker {
     private String name;
-    
+
     public Person(String name) {
         this.name = name;
     }
-    
+
     @Override
     public String speak() {
         return name + "说：你好！";
@@ -252,11 +255,11 @@ public class Person implements Speaker {
 
 public class Dog implements Speaker {
     private String name;
-    
+
     public Dog(String name) {
         this.name = name;
     }
-    
+
     @Override
     public String speak() {
         return name + "说：汪汪！";
@@ -286,12 +289,12 @@ public interface ISpeaker
 public class Person : ISpeaker
 {
     public string Name { get; set; }
-    
+
     public Person(string name)
     {
         Name = name;
     }
-    
+
     public string Speak()
     {
         return $"{Name}说：你好！";
@@ -301,12 +304,12 @@ public class Person : ISpeaker
 public class Dog : ISpeaker
 {
     public string Name { get; set; }
-    
+
     public Dog(string name)
     {
         Name = name;
     }
-    
+
     public string Speak()
     {
         return $"{Name}说：汪汪！";
@@ -485,3 +488,4 @@ func (d Dog) Bark() string {
 // 使用
 dog := Dog{
     Animal: Animal{Name: "旺财"},
+```

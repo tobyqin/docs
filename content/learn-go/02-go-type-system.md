@@ -1,4 +1,7 @@
-# 02_Go类型系统
+---
+type: docs
+title: "Go语言类型系统"
+---
 
 ## 基本类型
 
@@ -323,12 +326,12 @@ print(e.address["city"])  # 访问字典属性
 public class Person {
     private String name;
     private int age;
-    
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    
+
     // Getters and setters
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
@@ -340,23 +343,23 @@ public class Person {
 public class Employee extends Person {
     private Address address;
     private double salary;
-    
+
     public Employee(String name, int age, double salary) {
         super(name, age);
         this.salary = salary;
         this.address = new Address("New York", "NY");
     }
-    
+
     // 内部类
     public class Address {
         private String city;
         private String state;
-        
+
         public Address(String city, String state) {
             this.city = city;
             this.state = state;
         }
-        
+
         // Getters and setters
     }
 }
@@ -372,7 +375,7 @@ public class Employee extends Person {
 
 - 数组是值类型，作为参数传递时会复制整个数组
 - 切片是引用类型，修改切片会影响原始数据
-- 映射也是引用类型，不能对nil映射赋值
+- 映射也是引用类型，不能对 nil 映射赋值
 - 结构体是值类型，但可以使用指针来避免复制
-- Go没有类和继承，而是使用组合和接口
+- Go 没有类和继承，而是使用组合和接口
 - 结构体字段首字母大写表示公开，小写表示私有

@@ -1,6 +1,9 @@
-# 03_Go的独特特性
+---
+type: docs
+title: "Go语言独特特性"
+---
 
-## Go中的指针
+## Go 中的指针
 
 ### 基本概念
 
@@ -193,7 +196,7 @@ try {
 class DivisionException extends Exception {
     private double dividend;
     private double divisor;
-    
+
     public DivisionException(double dividend, double divisor) {
         super(String.format("不能将%.2f除以%.2f", dividend, divisor));
         this.dividend = dividend;
@@ -236,7 +239,7 @@ public class DivisionException : Exception
 {
     public double Dividend { get; }
     public double Divisor { get; }
-    
+
     public DivisionException(double dividend, double divisor)
         : base($"不能将{dividend}除以{divisor}")
     {
@@ -267,7 +270,7 @@ func processFile(path string) error {
         return fmt.Errorf("打开文件失败: %w", err)
     }
     defer file.Close()
-    
+
     // 处理文件...
     return nil
 }
@@ -279,18 +282,18 @@ func copyFile(src, dst string) error {
         return fmt.Errorf("打开源文件失败: %w", err)
     }
     defer srcFile.Close()
-    
+
     dstFile, err := os.Create(dst)
     if err != nil {
         return fmt.Errorf("创建目标文件失败: %w", err)
     }
     defer dstFile.Close()
-    
+
     _, err = io.Copy(dstFile, srcFile)
     if err != nil {
         return fmt.Errorf("复制文件失败: %w", err)
     }
-    
+
     return nil
 }
 
@@ -416,7 +419,7 @@ public async Task SayHelloAsync()
 await SayHelloAsync();
 ```
 
-### 通道和Select
+### 通道和 Select
 
 ```go
 // Go的通道 (Channels)
@@ -446,3 +449,4 @@ case msg1 := <-ch1:
 case msg2 := <-ch2:
     fmt.Println("收到来自ch2的消息:", msg2)
 case ch3 <- "hello
+```

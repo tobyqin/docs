@@ -1,10 +1,13 @@
-# 08_常见问题和错误
+---
+type: docs
+title: "常见问题和错误"
+---
 
-本章节将介绍Go语言学习和开发过程中常见的问题和易犯的错误，帮助开发者避免这些陷阱，特别是对于从其他语言转向Go的开发者。
+本章节将介绍 Go 语言学习和开发过程中常见的问题和易犯的错误，帮助开发者避免这些陷阱，特别是对于从其他语言转向 Go 的开发者。
 
 ## 并发相关问题
 
-### 1. Goroutine泄漏
+### 1. Goroutine 泄漏
 
 ```go
 // 错误示例
@@ -60,7 +63,7 @@ func nonDeadlock() {
     ch := make(chan int, 1)  // 使用缓冲通道
     ch <- 1
     <-ch
-    
+
     // 或者使用goroutine
     ch2 := make(chan int)
     go func() {
@@ -70,9 +73,9 @@ func nonDeadlock() {
 }
 ```
 
-## 指针和nil相关问题
+## 指针和 nil 相关问题
 
-### 1. nil指针解引用
+### 1. nil 指针解引用
 
 ```go
 // 错误示例
@@ -93,7 +96,7 @@ func (p *Person) GetName() string {
 }
 ```
 
-### 2. 接口nil判断
+### 2. 接口 nil 判断
 
 ```go
 // 错误示例
@@ -137,7 +140,7 @@ func sliceShare() {
     original := []int{1, 2, 3, 4, 5}
     slice1 := original[1:3]
     slice1[0] = 20  // 会修改original中的元素
-    
+
     // 如果不想共享，应该使用copy
     slice2 := make([]int, len(original))
     copy(slice2, original)
@@ -146,7 +149,7 @@ func sliceShare() {
 
 ## 与其他语言的对比
 
-### Python开发者常见问题
+### Python 开发者常见问题
 
 ```python
 # Python中的变量作用域
@@ -169,7 +172,7 @@ func counter() func() int {
 }
 ```
 
-### Java开发者常见问题
+### Java 开发者常见问题
 
 ```java
 // Java中的继承和多态
@@ -223,8 +226,8 @@ func (p *Person) SetName(name string) {
 
 ## 总结
 
-1. 始终注意goroutine的生命周期管理
-2. 谨慎处理nil值和接口
+1. 始终注意 goroutine 的生命周期管理
+2. 谨慎处理 nil 值和接口
 3. 理解切片的底层实现
 4. 避免过度使用反射
-5. 遵循Go的惯用模式，而不是强行套用其他语言的模式
+5. 遵循 Go 的惯用模式，而不是强行套用其他语言的模式

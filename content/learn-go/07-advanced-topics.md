@@ -1,10 +1,13 @@
-# 07_高级主题
+---
+type: docs
+title: "Go语言高级主题"
+---
 
-本章节将探讨Go语言中的一些高级特性和技术，这些内容适合已经掌握Go基础的开发者深入学习。
+本章节将探讨 Go 语言中的一些高级特性和技术，这些内容适合已经掌握 Go 基础的开发者深入学习。
 
 ## 反射和元编程
 
-Go的反射机制允许程序在运行时检查自身的结构，尽管Go不像Python那样是一种动态语言，但它提供了强大的反射API。
+Go 的反射机制允许程序在运行时检查自身的结构，尽管 Go 不像 Python 那样是一种动态语言，但它提供了强大的反射 API。
 
 ```go
 // Go反射示例
@@ -91,23 +94,23 @@ import java.lang.reflect.*;
 public class ReflectionExample {
     public static void main(String[] args) throws Exception {
         Person p = new Person("Alice", 30);
-        
+
         // 获取类信息
         Class<?> clazz = p.getClass();
         System.out.println("类型: " + clazz.getSimpleName());
-        
+
         // 获取字段信息
         System.out.println("\n字段:");
         for (Field field : clazz.getDeclaredFields()) {
             field.setAccessible(true);
             System.out.println(field.getName() + ": " + field.get(p));
         }
-        
+
         // 修改字段值
         Field nameField = clazz.getDeclaredField("name");
         nameField.setAccessible(true);
         nameField.set(p, "Bob");
-        
+
         System.out.println("\n修改后: " + p.getName());
     }
 }
@@ -115,12 +118,12 @@ public class ReflectionExample {
 class Person {
     private String name;
     private int age;
-    
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    
+
     public String getName() { return name; }
     public int getAge() { return age; }
 }
@@ -134,21 +137,21 @@ using System.Reflection;
 class Program {
     static void Main() {
         Person p = new Person { Name = "Alice", Age = 30 };
-        
+
         // 获取类型信息
         Type type = p.GetType();
         Console.WriteLine($"类型: {type.Name}");
-        
+
         // 获取属性信息
         Console.WriteLine("\n属性:");
         foreach (PropertyInfo prop in type.GetProperties()) {
             Console.WriteLine($"{prop.Name}: {prop.GetValue(p)}");
         }
-        
+
         // 修改属性值
         PropertyInfo nameProp = type.GetProperty("Name");
         nameProp.SetValue(p, "Bob");
-        
+
         Console.WriteLine($"\n修改后: {p.Name}");
     }
 }
@@ -159,9 +162,9 @@ class Person {
 }
 ```
 
-## CGO和FFI
+## CGO 和 FFI
 
-Go提供了与C语言交互的能力，这使得Go程序可以调用现有的C库。
+Go 提供了与 C 语言交互的能力，这使得 Go 程序可以调用现有的 C 库。
 
 ```go
 // Go调用C代码示例
@@ -222,17 +225,17 @@ public class JNIExample {
     static {
         System.loadLibrary("native");
     }
-    
+
     // 声明本地方法
     private native void printMessage(String message);
     private native int add(int a, int b);
-    
+
     public static void main(String[] args) {
         JNIExample example = new JNIExample();
-        
+
         // 调用本地方法
         example.printMessage("Hello from Java!");
-        
+
         int result = example.add(10, 20);
         System.out.println("C函数计算结果: " + result);
     }
@@ -248,14 +251,14 @@ class Program {
     // 导入C函数
     [DllImport("mylib.dll")]
     private static extern void PrintMessage(string message);
-    
+
     [DllImport("mylib.dll")]
     private static extern int Add(int a, int b);
-    
+
     static void Main() {
         // 调用C函数
         PrintMessage("Hello from C#!");
-        
+
         int result = Add(10, 20);
         Console.WriteLine($"C函数计算结果: {result}");
     }
@@ -264,7 +267,7 @@ class Program {
 
 ## 性能优化
 
-Go语言设计时就考虑了性能，但了解一些优化技巧可以进一步提高程序效率。
+Go 语言设计时就考虑了性能，但了解一些优化技巧可以进一步提高程序效率。
 
 ### 常见优化技巧
 
@@ -356,7 +359,7 @@ func main() {
 
 ### 性能分析工具
 
-Go提供了内置的性能分析工具：
+Go 提供了内置的性能分析工具：
 
 ```go
 package main
@@ -408,3 +411,4 @@ func main() {
 
 // 计算密集型函数示例
 func fibonacci
+```

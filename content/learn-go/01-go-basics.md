@@ -1,8 +1,11 @@
-# 01_Go基础
+---
+type: docs
+title: "Go语言基础"
+---
 
-## 设置Go环境
+## 设置 Go 环境
 
-### 安装Go
+### 安装 Go
 
 ```bash
 # 下载并安装Go (以macOS为例)
@@ -14,7 +17,7 @@ go version
 
 其他系统安装方式请参考[官方文档](https://golang.org/doc/install)
 
-### 理解GOPATH和Go模块
+### 理解 GOPATH 和 Go 模块
 
 ```bash
 # 查看当前GOPATH
@@ -26,25 +29,28 @@ cd myproject
 go mod init example.com/myproject
 ```
 
-**Go模块 vs 其他语言的包管理：**
+**Go 模块 vs 其他语言的包管理：**
+
 - **Python**: pip + requirements.txt/Pipenv/Poetry
 - **Java**: Maven/Gradle
 - **C#**: NuGet
 
-### IDE设置和基本工具
+### IDE 设置和基本工具
 
-推荐IDE：
-- VSCode + Go扩展
+推荐 IDE：
+
+- VSCode + Go 扩展
 - GoLand
-- Vim/Emacs + Go插件
+- Vim/Emacs + Go 插件
 
 常用工具：
+
 - `go fmt`: 代码格式化
 - `go vet`: 代码静态分析
 - `golint`: 代码风格检查
 - `go test`: 运行测试
 
-## Go语法基础
+## Go 语法基础
 
 ### 变量声明和类型
 
@@ -167,13 +173,13 @@ func (r Rectangle) Area() float64 {
 # Python
 def add(a, b):
     return a + b
-    
+
 # Python方法
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        
+
     def area(self):
         return self.width * self.height
 ```
@@ -188,12 +194,12 @@ public int add(int a, int b) {
 public class Rectangle {
     private double width;
     private double height;
-    
+
     public Rectangle(double width, double height) {
         this.width = width;
         this.height = height;
     }
-    
+
     public double area() {
         return width * height;
     }
@@ -202,14 +208,14 @@ public class Rectangle {
 
 ## 练习
 
-1. 创建一个简单的Go程序，打印"Hello, Go!"并编译运行它
+1. 创建一个简单的 Go 程序，打印"Hello, Go!"并编译运行它
 2. 编写一个函数，接受一个整数切片并返回其中所有偶数的和
 3. 创建一个结构体表示一本书，包含标题、作者和页数，并为其添加一个方法来打印书籍信息
 
 ## 常见陷阱
 
-- 未使用的变量和导入会导致编译错误（Python、Java和C#只会警告）
-- 大写字母开头的标识符表示公开可访问（其他语言使用explicit关键字如public）
-- Go没有类和继承，而是使用结构体和组合
-- 没有try/catch异常处理，而是使用错误返回值
+- 未使用的变量和导入会导致编译错误（Python、Java 和 C#只会警告）
+- 大写字母开头的标识符表示公开可访问（其他语言使用 explicit 关键字如 public）
+- Go 没有类和继承，而是使用结构体和组合
+- 没有 try/catch 异常处理，而是使用错误返回值
 - 短变量声明`:=`只能在函数内部使用，不能用于全局变量
