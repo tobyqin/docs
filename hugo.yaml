@@ -70,5 +70,6 @@ params:
     displayLogo: false
 
   footer:
-    displayCopyright: false
-    displayPoweredBy: true
+      displayCopyright: false
+      displayPoweredBy: false
+      width: normal
