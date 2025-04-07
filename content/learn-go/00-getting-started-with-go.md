@@ -1,6 +1,7 @@
 ---
 type: docs
-title: "从Python/Java/C#到Go：全面学习路径"
+title: "从 Python/Java 到Go"
+weight: 1
 ---
 
 ## 简介
