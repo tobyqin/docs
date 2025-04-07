@@ -3,6 +3,19 @@ languageCode: "en-us"
 title: "Toby's Documentation"
 theme: "hextra"
 
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+    # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
 # Enable search
 outputs:
   home:
@@ -52,3 +65,10 @@ params:
   theme:
     default: system
     displayToggle: true
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: true
