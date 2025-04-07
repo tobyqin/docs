@@ -4,7 +4,9 @@ type: docs
 weight: 10
 ---
 
-?> In this task, we will expose our application to internet users.
+{{% callout note %}}
+In this task, we will expose our application to internet users.
+{{% /callout %}}
 
 See also https://kubernetes.io/docs/concepts/services-networking/service/
 

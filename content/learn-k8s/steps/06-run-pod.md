@@ -4,7 +4,9 @@ type: docs
 weight: 6
 ---
 
-?> In this task, we will deploy a pod to k8s cluster.
+{{% callout note %}}
+In this task, we will deploy a pod to k8s cluster.
+{{% /callout %}}
 
 Source code for all upcoming tasks: <https://github.com/tobyqin/docs/tree/master/k8s/demo>
 

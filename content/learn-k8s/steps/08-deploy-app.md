@@ -4,7 +4,9 @@ type: docs
 weight: 8
 ---
 
-?> In this task, we will deploy an application with `Deployment` object type.
+{{% callout note %}}
+In this task, we will deploy an application with `Deployment` object type.
+{{% /callout %}}
 
 A better guide: https://kubernetes.io/docs/tutorials/configuration/configure-java-microservice/configure-java-microservice-interactive/
 

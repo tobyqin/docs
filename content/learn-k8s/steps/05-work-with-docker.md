@@ -4,7 +4,9 @@ type: docs
 weight: 5
 ---
 
-?> We will walk through to build and run a simple docker image in this task.
+{{% callout note %}}
+We will walk through to build and run a simple docker image in this task.
+{{% /callout %}}
 
 Source code: https://github.com/tobyqin/hello-docker
 

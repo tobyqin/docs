@@ -4,7 +4,9 @@ type: docs
 weight: 3
 ---
 
-?> In this task, we will warm up ourselves with `kubectl`, try to play with some basic commands.
+{{% callout note %}}
+In this task, we will warm up ourselves with `kubectl`, try to play with some basic commands.
+{{% /callout %}}
 
 ## Basic commands
 

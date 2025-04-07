@@ -4,7 +4,9 @@ type: docs
 weight: 7
 ---
 
-?> In this task we will run a job in k8s.
+{{% callout note %}}
+In this task we will run a job in k8s.
+{{% /callout %}}
 
 ## Manifest
 

@@ -4,7 +4,9 @@ type: docs
 weight: 9
 ---
 
-?> In this task, we will learn how to clean up k8s resources and objects.
+{{% callout note %}}
+In this task, we will learn how to clean up k8s resources and objects.
+{{% /callout %}}
 
 > Tips: Search `delete` in https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
