@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "Go语言中的面向对象编程"
+weight: 5
 ---
 
 ## 结构体和方法 vs. 类

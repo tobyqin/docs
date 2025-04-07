@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "Go语言基础"
+weight: 2
 ---
 
 ## 设置 Go 环境

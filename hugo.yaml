@@ -73,3 +73,6 @@ params:
       displayCopyright: false
       displayPoweredBy: false
       width: normal
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: full

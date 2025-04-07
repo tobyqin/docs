@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "Go语言类型系统"
+weight: 3
 ---
 
 ## 基本类型

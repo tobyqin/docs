@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "Go语言独特特性"
+weight: 4
 ---
 
 ## Go 中的指针

@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "Go生态系统与社区资源"
+weight: 10
 ---
 
 本章节将介绍 Go 语言的生态系统和社区资源，帮助从 Python、Java 和 C#转向 Go 的开发者更好地融入 Go 社区，利用现有资源加速开发。
