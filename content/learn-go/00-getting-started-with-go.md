@@ -1,6 +1,6 @@
 ---
 type: docs
-title: "从 Python/Java 到Go"
+title: "从 Python/Java 到 Go"
 weight: 1
 ---
 

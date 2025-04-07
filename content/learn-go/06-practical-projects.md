@@ -1,7 +1,7 @@
 ---
 type: docs
 title: "实践项目"
-weight: 6
+weight: 7
 ---
 
 本章节将通过实际项目示例，帮助您将 Go 的理论知识应用到实践中，并与 Python、Java 和 C#中的类似实现进行比较。

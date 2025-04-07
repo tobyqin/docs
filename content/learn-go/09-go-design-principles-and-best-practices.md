@@ -1,7 +1,7 @@
 ---
 type: docs
-title: "Go语言设计原则与最佳实践"
-weight: 9
+title: "Go 设计原则与最佳实践"
+weight: 10
 ---
 
 本章节将介绍 Go 语言的设计哲学、代码风格指南以及与 Python、Java 和 C#相比的最佳实践，帮助开发者更好地理解和应用 Go 语言的设计原则。

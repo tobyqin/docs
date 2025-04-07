@@ -1,6 +1,6 @@
 ---
 type: docs
-title: "Go语言基础"
+title: "Go 语言基础"
 weight: 2
 ---
 

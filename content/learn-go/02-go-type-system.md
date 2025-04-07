@@ -1,6 +1,6 @@
 ---
 type: docs
-title: "Go语言类型系统"
+title: "Go 语言类型系统"
 weight: 3
 ---
 

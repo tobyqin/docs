@@ -1,6 +1,6 @@
 ---
 type: docs
-title: "Go语言独特特性"
+title: "Go 语言独特特性"
 weight: 4
 ---
 
