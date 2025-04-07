@@ -6,6 +6,8 @@ theme: "hextra"
 module:
   imports:
     - path: github.com/imfing/hextra
+      version: v0.7.3
+  proxy: direct
 
 markup:
   # allow raw html
