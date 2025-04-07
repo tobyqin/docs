@@ -1,5 +1,6 @@
 ---
 title: Learn Golang
+weight: 4
 cascade:
   type: docs
 ---
