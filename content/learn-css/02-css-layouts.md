@@ -1,4 +1,7 @@
-# 02_CSS布局技术
+---
+type: docs
+title: "CSS布局技术"
+---
 
 ## 传统布局方法
 
@@ -9,15 +12,16 @@
 ```css
 /* 定位类型 */
 .element {
-  position: static;    /* 默认值，按正常文档流排列 */
-  position: relative;  /* 相对于原位置偏移 */
-  position: absolute;  /* 相对于最近的定位祖先元素偏移 */
-  position: fixed;     /* 相对于视口固定位置 */
-  position: sticky;    /* 根据滚动位置在relative和fixed之间切换 */
+  position: static; /* 默认值，按正常文档流排列 */
+  position: relative; /* 相对于原位置偏移 */
+  position: absolute; /* 相对于最近的定位祖先元素偏移 */
+  position: fixed; /* 相对于视口固定位置 */
+  position: sticky; /* 根据滚动位置在relative和fixed之间切换 */
 }
 ```
 
 示例：创建一个固定在页面右下角的按钮
+
 ```css
 .floating-button {
   position: fixed;
@@ -30,7 +34,7 @@
   color: white;
   text-align: center;
   line-height: 50px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -40,19 +44,20 @@
 
 ```css
 .left {
-  float: left;   /* 元素浮动到左侧 */
+  float: left; /* 元素浮动到左侧 */
 }
 
 .right {
-  float: right;  /* 元素浮动到右侧 */
+  float: right; /* 元素浮动到右侧 */
 }
 
 .clear {
-  clear: both;   /* 清除两侧浮动 */
+  clear: both; /* 清除两侧浮动 */
 }
 ```
 
 示例：创建简单的两列布局
+
 ```html
 <div class="container">
   <div class="sidebar">侧边栏</div>
@@ -86,31 +91,32 @@
 }
 ```
 
-## Flexbox布局
+## Flexbox 布局
 
-Flexbox是一维布局系统，适用于一行或一列的布局。
+Flexbox 是一维布局系统，适用于一行或一列的布局。
 
 ### 基本概念
 
 ```css
 .container {
-  display: flex;           /* 启用Flexbox */
-  flex-direction: row;     /* 主轴方向: row(默认), column, row-reverse, column-reverse */
+  display: flex; /* 启用Flexbox */
+  flex-direction: row; /* 主轴方向: row(默认), column, row-reverse, column-reverse */
   justify-content: center; /* 主轴对齐: flex-start, flex-end, center, space-between, space-around */
-  align-items: center;     /* 交叉轴对齐: flex-start, flex-end, center, stretch, baseline */
-  flex-wrap: wrap;         /* 换行: nowrap(默认), wrap, wrap-reverse */
+  align-items: center; /* 交叉轴对齐: flex-start, flex-end, center, stretch, baseline */
+  flex-wrap: wrap; /* 换行: nowrap(默认), wrap, wrap-reverse */
 }
 
 .item {
-  flex: 1;                 /* 简写: flex-grow, flex-shrink, flex-basis */
+  flex: 1; /* 简写: flex-grow, flex-shrink, flex-basis */
   /* 等同于: */
-  flex-grow: 1;            /* 增长比例 */
-  flex-shrink: 1;          /* 收缩比例 */
-  flex-basis: auto;        /* 初始大小 */
+  flex-grow: 1; /* 增长比例 */
+  flex-shrink: 1; /* 收缩比例 */
+  flex-basis: auto; /* 初始大小 */
 }
 ```
 
 示例：响应式导航栏
+
 ```html
 <nav class="navbar">
   <div class="logo">Logo</div>
@@ -155,40 +161,41 @@ Flexbox是一维布局系统，适用于一行或一列的布局。
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .nav-links {
     margin-top: 1rem;
     flex-direction: column;
     width: 100%;
   }
-  
+
   .nav-links li {
     margin: 0.5rem 0;
   }
 }
 ```
 
-## Grid布局
+## Grid 布局
 
-Grid是二维布局系统，适用于行和列的布局。
+Grid 是二维布局系统，适用于行和列的布局。
 
 ### 基本语法
 
 ```css
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;  /* 三列，比例为1:2:1 */
+  grid-template-columns: 1fr 2fr 1fr; /* 三列，比例为1:2:1 */
   grid-template-rows: 100px auto 100px; /* 三行，第一行和第三行高100px，中间行自适应 */
-  gap: 10px;                           /* 行列间距 */
+  gap: 10px; /* 行列间距 */
 }
 
 .item {
-  grid-column: 1 / 3;  /* 从第1列线到第3列线 (跨2列) */
-  grid-row: 2 / 3;     /* 从第2行线到第3行线 (跨1行) */
+  grid-column: 1 / 3; /* 从第1列线到第3列线 (跨2列) */
+  grid-row: 2 / 3; /* 从第2行线到第3行线 (跨1行) */
 }
 ```
 
 示例：创建一个典型的网站布局
+
 ```html
 <div class="grid-layout">
   <header class="header">页眉</header>
@@ -201,7 +208,7 @@ Grid是二维布局系统，适用于行和列的布局。
 ```css
 .grid-layout {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header"
     "sidebar content content"
     "footer footer footer";
@@ -239,7 +246,7 @@ Grid是二维布局系统，适用于行和列的布局。
 /* 响应式设计 */
 @media (max-width: 768px) {
   .grid-layout {
-    grid-template-areas: 
+    grid-template-areas:
       "header"
       "sidebar"
       "content"
@@ -266,13 +273,19 @@ Grid是二维布局系统，适用于行和列的布局。
 
 /* 常用断点 */
 /* 手机 */
-@media (max-width: 576px) { ... }
+@media (max-width: 576px) {
+  ...;
+}
 
 /* 平板 */
-@media (min-width: 577px) and (max-width: 992px) { ... }
+@media (min-width: 577px) and (max-width: 992px) {
+  ...;
+}
 
 /* 桌面 */
-@media (min-width: 993px) { ... }
+@media (min-width: 993px) {
+  ...;
+}
 ```
 
 ### 视口单位
@@ -281,7 +294,7 @@ Grid是二维布局系统，适用于行和列的布局。
 
 ```css
 .responsive-element {
-  width: 50vw;  /* 视口宽度的50% */
+  width: 50vw; /* 视口宽度的50% */
   height: 50vh; /* 视口高度的50% */
   font-size: 5vmin; /* 视口宽度或高度中较小值的5% */
 }
@@ -327,7 +340,7 @@ img {
   background-color: white;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -344,4 +357,4 @@ img {
 }
 ```
 
-这个示例自动适应不同屏幕尺寸，卡片数量会根据可用空间自动调整，确保每个卡片至少250px宽，但可以更宽以填充可用空间。
+这个示例自动适应不同屏幕尺寸，卡片数量会根据可用空间自动调整，确保每个卡片至少 250px 宽，但可以更宽以填充可用空间。

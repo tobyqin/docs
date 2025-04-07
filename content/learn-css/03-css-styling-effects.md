@@ -1,4 +1,7 @@
-# 03_CSS样式与效果
+---
+type: docs
+title: "CSS样式与效果"
+---
 
 ## 文本与字体样式
 
@@ -6,13 +9,13 @@
 
 ```css
 body {
-  font-family: 'Arial', sans-serif; /* 字体系列 */
-  font-size: 16px;                  /* 字体大小 */
-  font-weight: 400;                 /* 字体粗细: 100-900 或 normal, bold */
-  font-style: normal;               /* 字体样式: normal, italic, oblique */
-  line-height: 1.5;                 /* 行高 */
-  letter-spacing: 0.5px;            /* 字母间距 */
-  word-spacing: 2px;                /* 单词间距 */
+  font-family: "Arial", sans-serif; /* 字体系列 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: 400; /* 字体粗细: 100-900 或 normal, bold */
+  font-style: normal; /* 字体样式: normal, italic, oblique */
+  line-height: 1.5; /* 行高 */
+  letter-spacing: 0.5px; /* 字母间距 */
+  word-spacing: 2px; /* 单词间距 */
 }
 ```
 
@@ -20,37 +23,37 @@ body {
 
 ```css
 p {
-  text-align: left;                 /* 文本对齐: left, right, center, justify */
-  text-decoration: none;            /* 文本装饰: none, underline, line-through, overline */
-  text-transform: capitalize;       /* 文本转换: none, uppercase, lowercase, capitalize */
-  text-indent: 2em;                 /* 首行缩进 */
-  white-space: nowrap;              /* 空白处理: normal, nowrap, pre, pre-line, pre-wrap */
-  overflow: hidden;                 /* 溢出处理: visible, hidden, scroll, auto */
-  text-overflow: ellipsis;          /* 文本溢出: clip, ellipsis */
+  text-align: left; /* 文本对齐: left, right, center, justify */
+  text-decoration: none; /* 文本装饰: none, underline, line-through, overline */
+  text-transform: capitalize; /* 文本转换: none, uppercase, lowercase, capitalize */
+  text-indent: 2em; /* 首行缩进 */
+  white-space: nowrap; /* 空白处理: normal, nowrap, pre, pre-line, pre-wrap */
+  overflow: hidden; /* 溢出处理: visible, hidden, scroll, auto */
+  text-overflow: ellipsis; /* 文本溢出: clip, ellipsis */
 }
 ```
 
-### Web字体
+### Web 字体
 
 ```css
 /* 使用Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 /* 或使用@font-face */
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('fonts/mycustomfont.woff2') format('woff2'),
-       url('fonts/mycustomfont.woff') format('woff');
+  font-family: "MyCustomFont";
+  src: url("fonts/mycustomfont.woff2") format("woff2"), url("fonts/mycustomfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  font-family: 'MyCustomFont', serif;
+  font-family: "MyCustomFont", serif;
 }
 ```
 
@@ -59,12 +62,14 @@ h1 {
 ```html
 <h1 class="headline">精美排版示例</h1>
 <p class="subheading">探索CSS中的文本与字体样式</p>
-<p class="content">这是一段示例文本，展示了如何使用CSS控制文本的外观。通过调整字体、大小、间距和其他属性，可以创建出既美观又易读的排版效果。</p>
+<p class="content">
+  这是一段示例文本，展示了如何使用CSS控制文本的外观。通过调整字体、大小、间距和其他属性，可以创建出既美观又易读的排版效果。
+</p>
 ```
 
 ```css
 .headline {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
@@ -73,7 +78,7 @@ h1 {
 }
 
 .subheading {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   color: #7f8c8d;
@@ -82,7 +87,7 @@ h1 {
 }
 
 .content {
-  font-family: 'Helvetica', sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: #34495e;
@@ -97,13 +102,13 @@ h1 {
 
 ```css
 .color-examples {
-  color: red;                    /* 颜色名称 */
-  color: #ff0000;                /* 十六进制 */
-  color: #f00;                   /* 十六进制简写 */
-  color: rgb(255, 0, 0);         /* RGB */
-  color: rgba(255, 0, 0, 0.5);   /* RGBA (带透明度) */
-  color: hsl(0, 100%, 50%);      /* HSL (色相, 饱和度, 亮度) */
-  color: hsla(0, 100%, 50%, 0.5);/* HSLA (带透明度) */
+  color: red; /* 颜色名称 */
+  color: #ff0000; /* 十六进制 */
+  color: #f00; /* 十六进制简写 */
+  color: rgb(255, 0, 0); /* RGB */
+  color: rgba(255, 0, 0, 0.5); /* RGBA (带透明度) */
+  color: hsl(0, 100%, 50%); /* HSL (色相, 饱和度, 亮度) */
+  color: hsla(0, 100%, 50%, 0.5); /* HSLA (带透明度) */
 }
 ```
 
@@ -111,15 +116,15 @@ h1 {
 
 ```css
 .background-examples {
-  background-color: #f0f0f0;     /* 背景颜色 */
-  background-image: url('bg.jpg');/* 背景图片 */
-  background-repeat: no-repeat;   /* 背景重复: repeat, no-repeat, repeat-x, repeat-y */
-  background-position: center;    /* 背景位置 */
-  background-size: cover;         /* 背景尺寸: auto, cover, contain, 具体尺寸 */
-  background-attachment: fixed;   /* 背景附着: scroll, fixed, local */
-  
+  background-color: #f0f0f0; /* 背景颜色 */
+  background-image: url("bg.jpg"); /* 背景图片 */
+  background-repeat: no-repeat; /* 背景重复: repeat, no-repeat, repeat-x, repeat-y */
+  background-position: center; /* 背景位置 */
+  background-size: cover; /* 背景尺寸: auto, cover, contain, 具体尺寸 */
+  background-attachment: fixed; /* 背景附着: scroll, fixed, local */
+
   /* 简写形式 */
-  background: #f0f0f0 url('bg.jpg') no-repeat center/cover fixed;
+  background: #f0f0f0 url("bg.jpg") no-repeat center/cover fixed;
 }
 ```
 
@@ -145,7 +150,13 @@ h1 {
 
 /* 重复渐变 */
 .repeating-gradient {
-  background: repeating-linear-gradient(45deg, #3498db, #3498db 10px, #2ecc71 10px, #2ecc71 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    #3498db,
+    #3498db 10px,
+    #2ecc71 10px,
+    #2ecc71 20px
+  );
 }
 ```
 
@@ -184,23 +195,23 @@ h1 {
   transform: translateX(20px);
   transform: translateY(20px);
   transform: translate(20px, 20px);
-  
+
   /* 缩放 */
   transform: scaleX(1.5);
   transform: scaleY(1.5);
   transform: scale(1.5);
-  
+
   /* 旋转 */
   transform: rotate(45deg);
-  
+
   /* 倾斜 */
   transform: skewX(10deg);
   transform: skewY(10deg);
   transform: skew(10deg, 10deg);
-  
+
   /* 组合变换 (从右到左应用) */
   transform: rotate(45deg) scale(1.5) translate(20px, 20px);
-  
+
   /* 3D变换 */
   transform: rotateX(45deg);
   transform: rotateY(45deg);
@@ -218,13 +229,13 @@ h1 {
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: 0s;
-  
+
   /* 简写形式 */
   transition: background-color 0.3s ease 0s;
-  
+
   /* 多属性过渡 */
   transition: background-color 0.3s ease, transform 0.5s ease-out;
-  
+
   /* 所有属性过渡 */
   transition: all 0.3s ease;
 }
@@ -255,7 +266,7 @@ h1 {
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-play-state: running;
-  
+
   /* 简写形式 */
   animation: slide-in 1s ease-out 0s 1 normal forwards running;
 }
@@ -278,8 +289,12 @@ h1 {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 
@@ -289,7 +304,7 @@ h1 {
 
 ```html
 <div class="card">
-  <img src="image.jpg" alt="卡片图片">
+  <img src="image.jpg" alt="卡片图片" />
   <div class="card-content">
     <h3>卡片标题</h3>
     <p>卡片描述文本，展示悬停效果。</p>
@@ -302,7 +317,7 @@ h1 {
   width: 300px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -318,7 +333,7 @@ h1 {
 }
 
 .card:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
@@ -347,13 +362,18 @@ h1 {
 }
 
 .animated-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.7s ease;
   z-index: -1;
 }
@@ -419,9 +439,11 @@ h1 {
 
 ```javascript
 // 切换页面的JavaScript
-document.querySelector('.page-container').addEventListener('click', function() {
-  this.classList.toggle('active');
-});
+document
+  .querySelector(".page-container")
+  .addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
 ```
 
-这些示例展示了如何使用CSS创建各种视觉效果，从简单的颜色变化到复杂的动画和过渡。通过组合这些技术，可以创建出既美观又具有交互性的用户界面。
+这些示例展示了如何使用 CSS 创建各种视觉效果，从简单的颜色变化到复杂的动画和过渡。通过组合这些技术，可以创建出既美观又具有交互性的用户界面。

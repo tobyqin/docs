@@ -1,20 +1,23 @@
-# 06_Sass高级特性
+---
+type: docs
+title: "Sass高级特性"
+---
 
 ## 条件语句与循环
 
 ### 条件语句
 
-Sass提供`@if`、`@else if`和`@else`指令进行条件控制。
+Sass 提供`@if`、`@else if`和`@else`指令进行条件控制。
 
 ```scss
 // 基本条件语句
-$theme: 'dark';
+$theme: "dark";
 
 body {
-  @if $theme == 'light' {
+  @if $theme == "light" {
     background-color: #fff;
     color: #000;
-  } @else if $theme == 'dark' {
+  } @else if $theme == "dark" {
     background-color: #333;
     color: #fff;
   } @else {
@@ -38,7 +41,8 @@ body {
 }
 ```
 
-**与Python条件语句对比**:
+**与 Python 条件语句对比**:
+
 ```python
 # Python条件语句
 theme = 'dark'
@@ -56,9 +60,9 @@ else:
 
 ### 循环语句
 
-Sass提供三种循环方式：`@for`、`@each`和`@while`。
+Sass 提供三种循环方式：`@for`、`@each`和`@while`。
 
-#### @for循环
+#### @for 循环
 
 ```scss
 // 从1到3的循环
@@ -69,9 +73,15 @@ Sass提供三种循环方式：`@for`、`@each`和`@while`。
 }
 
 // 编译结果
-.col-1 { width: 33.3333%; }
-.col-2 { width: 66.6667%; }
-.col-3 { width: 100%; }
+.col-1 {
+  width: 33.3333%;
+}
+.col-2 {
+  width: 66.6667%;
+}
+.col-3 {
+  width: 100%;
+}
 
 // 从0到2的循环
 @for $i from 0 to 3 {
@@ -81,12 +91,18 @@ Sass提供三种循环方式：`@for`、`@each`和`@while`。
 }
 
 // 编译结果
-.m-0 { margin: 0rem; }
-.m-1 { margin: 1rem; }
-.m-2 { margin: 2rem; }
+.m-0 {
+  margin: 0rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
 ```
 
-#### @each循环
+#### @each 循环
 
 ```scss
 // 遍历列表
@@ -99,21 +115,27 @@ $colors: red, green, blue;
 }
 
 // 编译结果
-.text-red { color: red; }
-.text-green { color: green; }
-.text-blue { color: blue; }
+.text-red {
+  color: red;
+}
+.text-green {
+  color: green;
+}
+.text-blue {
+  color: blue;
+}
 
 // 遍历映射
 $theme-colors: (
   "primary": #3498db,
   "success": #2ecc71,
-  "danger": #e74c3c
+  "danger": #e74c3c,
 );
 
 @each $name, $color in $theme-colors {
   .btn-#{$name} {
     background-color: $color;
-    
+
     &:hover {
       background-color: darken($color, 10%);
     }
@@ -121,15 +143,27 @@ $theme-colors: (
 }
 
 // 编译结果
-.btn-primary { background-color: #3498db; }
-.btn-primary:hover { background-color: #217dbb; }
-.btn-success { background-color: #2ecc71; }
-.btn-success:hover { background-color: #25a25a; }
-.btn-danger { background-color: #e74c3c; }
-.btn-danger:hover { background-color: #d62c1a; }
+.btn-primary {
+  background-color: #3498db;
+}
+.btn-primary:hover {
+  background-color: #217dbb;
+}
+.btn-success {
+  background-color: #2ecc71;
+}
+.btn-success:hover {
+  background-color: #25a25a;
+}
+.btn-danger {
+  background-color: #e74c3c;
+}
+.btn-danger:hover {
+  background-color: #d62c1a;
+}
 ```
 
-#### @while循环
+#### @while 循环
 
 ```scss
 $i: 1;
@@ -142,12 +176,19 @@ $i: 1;
 }
 
 // 编译结果
-.item-1 { width: 100%; }
-.item-2 { width: 50%; }
-.item-3 { width: 33.3333%; }
+.item-1 {
+  width: 100%;
+}
+.item-2 {
+  width: 50%;
+}
+.item-3 {
+  width: 33.3333%;
+}
 ```
 
-**与Python循环对比**:
+**与 Python 循环对比**:
+
 ```python
 # Python for循环
 for i in range(1, 4):  # 1到3
@@ -176,25 +217,25 @@ while i <= 3:
 
 ## 模块化与导入系统
 
-### @import指令
+### @import 指令
 
-Sass的`@import`允许将多个Sass文件组合成一个文件。
+Sass 的`@import`允许将多个 Sass 文件组合成一个文件。
 
 ```scss
 // 基本导入
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // 多文件导入
-@import 'reset', 'typography', 'buttons';
+@import "reset", "typography", "buttons";
 
 // 嵌套导入
 .sidebar {
-  @import 'sidebar-styles';
+  @import "sidebar-styles";
 }
 ```
 
-### @use指令(Sass 3.6+)
+### @use 指令(Sass 3.6+)
 
 `@use`是`@import`的现代替代品，提供了命名空间和模块化功能。
 
@@ -214,7 +255,7 @@ $secondary: #2ecc71;
 }
 
 // main.scss
-@use 'colors';
+@use "colors";
 
 .button {
   background-color: colors.$primary;
@@ -226,7 +267,7 @@ $secondary: #2ecc71;
 }
 ```
 
-### @forward指令(Sass 3.6+)
+### @forward 指令(Sass 3.6+)
 
 `@forward`允许从一个模块加载并重新导出样式，便于创建统一的入口点。
 
@@ -241,11 +282,11 @@ $secondary-color: #2ecc71;
 }
 
 // _index.scss
-@forward 'variables';
-@forward 'functions';
+@forward "variables";
+@forward "functions";
 
 // main.scss
-@use 'index' as *;
+@use "index" as *;
 
 .element {
   color: $primary-color;
@@ -268,13 +309,14 @@ $secondary: #2ecc71 !default;
 }
 
 // main.scss
-@use 'theme' with (
+@use "theme" with (
   $primary: #9b59b6,
   $secondary: #f1c40f
 );
 ```
 
-**与Python模块系统对比**:
+**与 Python 模块系统对比**:
+
 ```python
 # Python模块导入
 import colors
@@ -288,9 +330,9 @@ config.DEBUG = True
 
 ## 最佳实践与架构模式
 
-### 7-1模式
+### 7-1 模式
 
-将Sass文件组织为7个文件夹和1个主文件。
+将 Sass 文件组织为 7 个文件夹和 1 个主文件。
 
 ```
 sass/
@@ -318,24 +360,24 @@ sass/
 |-- main.scss         # 主文件
 ```
 
-### BEM命名约定
+### BEM 命名约定
 
-BEM(Block Element Modifier)是一种CSS命名约定。
+BEM(Block Element Modifier)是一种 CSS 命名约定。
 
 ```scss
 // Block
 .card {
   // ...
-  
+
   // Element
   &__header {
     // ...
   }
-  
+
   &__body {
     // ...
   }
-  
+
   // Modifier
   &--featured {
     // ...
@@ -349,9 +391,9 @@ BEM(Block Element Modifier)是一种CSS命名约定。
 .card--featured { ... }
 ```
 
-### ITCSS架构
+### ITCSS 架构
 
-Inverted Triangle CSS是一种从通用到特定的CSS组织方法。
+Inverted Triangle CSS 是一种从通用到特定的 CSS 组织方法。
 
 ```
 1. Settings    - 变量和配置
@@ -363,9 +405,9 @@ Inverted Triangle CSS是一种从通用到特定的CSS组织方法。
 7. Utilities   - 辅助类
 ```
 
-## Sass与现代前端框架的集成
+## Sass 与现代前端框架的集成
 
-### Vue与Sass
+### Vue 与 Sass
 
 ```vue
 <template>
@@ -384,14 +426,14 @@ $primary-color: #3498db;
 
 .component {
   padding: 20px;
-  
+
   &__button {
     background-color: $primary-color;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    
+
     &:hover {
       background-color: darken($primary-color, 10%);
     }
@@ -400,16 +442,16 @@ $primary-color: #3498db;
 </style>
 ```
 
-### React与Sass
+### React 与 Sass
 
-**使用CSS模块**:
+**使用 CSS 模块**:
 
 ```jsx
 // Button.jsx
-import React from 'react';
-import styles from './Button.module.scss';
+import React from "react";
+import styles from "./Button.module.scss";
 
-const Button = ({ children, variant = 'primary' }) => {
+const Button = ({ children, variant = "primary" }) => {
   return (
     <button className={`${styles.button} ${styles[`button--${variant}`]}`}>
       {children}
@@ -431,29 +473,29 @@ $danger-color: #e74c3c;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  
+
   &--primary {
     background-color: $primary-color;
     color: white;
-    
+
     &:hover {
       background-color: darken($primary-color, 10%);
     }
   }
-  
+
   &--success {
     background-color: $success-color;
     color: white;
-    
+
     &:hover {
       background-color: darken($success-color, 10%);
     }
   }
-  
+
   &--danger {
     background-color: $danger-color;
     color: white;
-    
+
     &:hover {
       background-color: darken($danger-color, 10%);
     }
@@ -461,19 +503,19 @@ $danger-color: #e74c3c;
 }
 ```
 
-### Angular与Sass
+### Angular 与 Sass
 
 ```typescript
 // button.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  selector: "app-button",
+  templateUrl: "./button.component.html",
+  styleUrls: ["./button.component.scss"],
 })
 export class ButtonComponent {
-  @Input() variant: 'primary' | 'success' | 'danger' = 'primary';
+  @Input() variant: "primary" | "success" | "danger" = "primary";
 }
 ```
 
@@ -493,7 +535,7 @@ $danger-color: #e74c3c;
 @mixin button-variant($color) {
   background-color: $color;
   color: white;
-  
+
   &:hover {
     background-color: darken($color, 10%);
   }
@@ -504,15 +546,15 @@ $danger-color: #e74c3c;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  
+
   &--primary {
     @include button-variant($primary-color);
   }
-  
+
   &--success {
     @include button-variant($success-color);
   }
-  
+
   &--danger {
     @include button-variant($danger-color);
   }
@@ -533,7 +575,7 @@ $themes: (
     primary: #3498db,
     success: #2ecc71,
     warning: #f39c12,
-    danger: #e74c3c
+    danger: #e74c3c,
   ),
   dark: (
     bg-primary: #222222,
@@ -544,12 +586,12 @@ $themes: (
     primary: #3498db,
     success: #2ecc71,
     warning: #f39c12,
-    danger: #e74c3c
-  )
+    danger: #e74c3c,
+  ),
 );
 
 // _theme-functions.scss
-@function theme-get($key, $theme-name: 'light') {
+@function theme-get($key, $theme-name: "light") {
   $theme: map-get($themes, $theme-name);
   @return map-get($theme, $key);
 }
@@ -558,7 +600,7 @@ $themes: (
 @mixin themed() {
   @each $theme-name, $theme in $themes {
     .theme-#{$theme-name} & {
-      @content($theme-name, $theme);
+      @content ($theme-name, $theme);
     }
   }
 }
@@ -576,30 +618,30 @@ $themes: (
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   @include themed using ($theme-name, $theme) {
     background-color: map-get($theme, primary);
     color: map-get($theme, bg-primary);
-    
+
     &:hover {
       background-color: darken(map-get($theme, primary), 10%);
     }
   }
-  
+
   &--success {
     @include themed using ($theme-name, $theme) {
       background-color: map-get($theme, success);
-      
+
       &:hover {
         background-color: darken(map-get($theme, success), 10%);
       }
     }
   }
-  
+
   &--danger {
     @include themed using ($theme-name, $theme) {
       background-color: map-get($theme, danger);
-      
+
       &:hover {
         background-color: darken(map-get($theme, danger), 10%);
       }
@@ -612,42 +654,42 @@ $themes: (
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-  @include theme-aware('background-color', 'bg-primary');
-  @include theme-aware('color', 'text-primary');
-  @include theme-aware('border', 'border');
-  
+
+  @include theme-aware("background-color", "bg-primary");
+  @include theme-aware("color", "text-primary");
+  @include theme-aware("border", "border");
+
   &__header {
     padding: 15px;
-    @include theme-aware('border-bottom', 'border');
-    
+    @include theme-aware("border-bottom", "border");
+
     h3 {
       margin: 0;
-      @include theme-aware('color', 'primary');
+      @include theme-aware("color", "primary");
     }
   }
-  
+
   &__body {
     padding: 15px;
-    
+
     p {
-      @include theme-aware('color', 'text-secondary');
+      @include theme-aware("color", "text-secondary");
     }
   }
-  
+
   &__footer {
     padding: 15px;
-    @include theme-aware('border-top', 'border');
-    @include theme-aware('background-color', 'bg-secondary');
+    @include theme-aware("border-top", "border");
+    @include theme-aware("background-color", "bg-secondary");
   }
 }
 
 // main.scss
-@import 'theme-config';
-@import 'theme-functions';
-@import 'theme-mixins';
-@import 'buttons';
-@import 'cards';
+@import "theme-config";
+@import "theme-functions";
+@import "theme-mixins";
+@import "buttons";
+@import "cards";
 
 // 默认使用亮色主题
 body {
@@ -663,7 +705,7 @@ body {
 }
 ```
 
-**HTML使用示例**:
+**HTML 使用示例**:
 
 ```html
 <div class="theme-light">
@@ -683,9 +725,12 @@ body {
   </div>
 </div>
 
-<button class="theme-toggle" onclick="document.body.classList.toggle('theme-dark')">
+<button
+  class="theme-toggle"
+  onclick="document.body.classList.toggle('theme-dark')"
+>
   切换主题
 </button>
 ```
 
-这个高级主题系统示例展示了如何使用Sass的条件语句、循环、函数和混合来创建一个灵活、可扩展的主题切换系统。
+这个高级主题系统示例展示了如何使用 Sass 的条件语句、循环、函数和混合来创建一个灵活、可扩展的主题切换系统。

@@ -1,14 +1,17 @@
-# 05_Sass核心功能
+---
+type: docs
+title: "Sass核心功能"
+---
 
 ## 变量系统
 
-Sass变量使用`$`符号定义，可以存储颜色、字体或任何CSS值。
+Sass 变量使用`$`符号定义，可以存储颜色、字体或任何 CSS 值。
 
 ```scss
 // 变量定义
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
-$font-stack: 'Helvetica', Arial, sans-serif;
+$font-stack: "Helvetica", Arial, sans-serif;
 $base-padding: 15px;
 $border-radius: 4px;
 
@@ -34,7 +37,8 @@ $global-var: #000 !global;
 $brand-color: #3498db !default;
 ```
 
-**与Python变量对比**:
+**与 Python 变量对比**:
+
 ```python
 # Python变量
 primary_color = "#3498db"
@@ -51,22 +55,22 @@ global_var = "#000"
 
 ## 嵌套规则
 
-Sass允许按HTML的层次结构嵌套CSS选择器。
+Sass 允许按 HTML 的层次结构嵌套 CSS 选择器。
 
 ```scss
 // 基本嵌套
 nav {
   background-color: #333;
-  
+
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  
+
   li {
     display: inline-block;
-    
+
     a {
       color: white;
       text-decoration: none;
@@ -77,10 +81,23 @@ nav {
 }
 
 // 等同于CSS
-nav { background-color: #333; }
-nav ul { margin: 0; padding: 0; list-style: none; }
-nav li { display: inline-block; }
-nav li a { color: white; text-decoration: none; padding: 10px 15px; display: block; }
+nav {
+  background-color: #333;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
 ```
 
 ### 父选择器引用(&)
@@ -90,25 +107,33 @@ nav li a { color: white; text-decoration: none; padding: 10px 15px; display: blo
 ```scss
 .button {
   background-color: blue;
-  
+
   &:hover {
     background-color: darkblue;
   }
-  
+
   &.large {
     padding: 20px;
   }
-  
+
   &-primary {
     background-color: green;
   }
 }
 
 // 等同于CSS
-.button { background-color: blue; }
-.button:hover { background-color: darkblue; }
-.button.large { padding: 20px; }
-.button-primary { background-color: green; }
+.button {
+  background-color: blue;
+}
+.button:hover {
+  background-color: darkblue;
+}
+.button.large {
+  padding: 20px;
+}
+.button-primary {
+  background-color: green;
+}
 ```
 
 ### 属性嵌套
@@ -122,7 +147,7 @@ nav li a { color: white; text-decoration: none; padding: 10px 15px; display: blo
     size: 16px;
     weight: bold;
   }
-  
+
   margin: {
     top: 10px;
     right: 5px;
@@ -143,34 +168,35 @@ nav li a { color: white; text-decoration: none; padding: 10px 15px; display: blo
 }
 ```
 
-**与Python缩进块对比**:
+**与 Python 缩进块对比**:
+
 ```python
 # Python中的嵌套结构
 class Navigation:
     def __init__(self):
         self.background_color = "#333"
-        
+
     class List:
         def __init__(self):
             self.margin = 0
             self.padding = 0
             self.style = "none"
-            
+
     class Item:
         def __init__(self):
             self.display = "inline-block"
-            
+
         class Link:
             def __init__(self):
                 self.color = "white"
                 self.text_decoration = "none"
 ```
 
-## Mixins和函数
+## Mixins 和函数
 
 ### Mixins
 
-Mixins是可重用的CSS声明组，类似Python中的函数。
+Mixins 是可重用的 CSS 声明组，类似 Python 中的函数。
 
 ```scss
 // 定义mixin
@@ -186,7 +212,7 @@ Mixins是可重用的CSS声明组，类似Python中的函数。
 }
 
 // 带默认值的mixin
-@mixin box-shadow($x: 0, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+@mixin box-shadow($x: 0, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.4)) {
   -webkit-box-shadow: $x $y $blur $color;
   -moz-box-shadow: $x $y $blur $color;
   box-shadow: $x $y $blur $color;
@@ -199,7 +225,7 @@ Mixins是可重用的CSS声明组，类似Python中的函数。
 
 // 覆盖默认值
 .card-highlighted {
-  @include box-shadow(0, 5px, 10px, rgba(0,0,0,.6));
+  @include box-shadow(0, 5px, 10px, rgba(0, 0, 0, 0.6));
 }
 
 // 可变参数mixin
@@ -211,13 +237,13 @@ Mixins是可重用的CSS声明组，类似Python中的函数。
 
 // 使用可变参数
 .element {
-  @include transition(color .3s ease, background-color .5s ease);
+  @include transition(color 0.3s ease, background-color 0.5s ease);
 }
 ```
 
 ### 函数
 
-Sass函数返回计算值，可在样式中使用。
+Sass 函数返回计算值，可在样式中使用。
 
 ```scss
 // 自定义函数
@@ -227,13 +253,13 @@ Sass函数返回计算值，可在样式中使用。
 
 // 使用函数
 .col-4 {
-  width: calculate-width(4);  // 返回 33.33333%
+  width: calculate-width(4); // 返回 33.33333%
 }
 
 // 复杂函数示例
 @function text-contrast($background) {
   $brightness: lightness($background);
-  
+
   @if $brightness > 60% {
     @return #000; // 深色文本用于浅色背景
   } @else {
@@ -249,7 +275,8 @@ Sass函数返回计算值，可在样式中使用。
 }
 ```
 
-**与Python函数对比**:
+**与 Python 函数对比**:
+
 ```python
 # Python函数
 def border_radius(radius):
@@ -274,7 +301,7 @@ def calculate_width(col_span, total_cols=12):
 
 ## 继承与扩展
 
-Sass的`@extend`指令允许一个选择器继承另一个选择器的样式。
+Sass 的`@extend`指令允许一个选择器继承另一个选择器的样式。
 
 ```scss
 // 基本样式
@@ -301,7 +328,10 @@ Sass的`@extend`指令允许一个选择器继承另一个选择器的样式。
 }
 
 // 编译为CSS
-.message, .success, .error, .warning {
+.message,
+.success,
+.error,
+.warning {
   border: 1px solid #ccc;
   padding: 10px;
   color: #333;
@@ -322,7 +352,7 @@ Sass的`@extend`指令允许一个选择器继承另一个选择器的样式。
 
 ### 占位符选择器(%)
 
-占位符选择器只有被扩展时才会编译到CSS中。
+占位符选择器只有被扩展时才会编译到 CSS 中。
 
 ```scss
 // 定义占位符
@@ -348,7 +378,8 @@ Sass的`@extend`指令允许一个选择器继承另一个选择器的样式。
 }
 
 // 编译为CSS（不包含%button-base）
-.primary-button, .secondary-button {
+.primary-button,
+.secondary-button {
   display: inline-block;
   padding: 10px 15px;
   border: none;
@@ -367,7 +398,8 @@ Sass的`@extend`指令允许一个选择器继承另一个选择器的样式。
 }
 ```
 
-**与Python类继承对比**:
+**与 Python 类继承对比**:
+
 ```python
 # Python类继承
 class Message:
@@ -411,11 +443,11 @@ $transition-speed: 0.3s;
 @mixin button-variant($bg-color, $text-color: white) {
   background-color: $bg-color;
   color: $text-color;
-  
+
   &:hover {
     background-color: darken($bg-color, 10%);
   }
-  
+
   &:active {
     background-color: darken($bg-color, 15%);
   }
@@ -425,7 +457,7 @@ $transition-speed: 0.3s;
 %card-base {
   border-radius: $border-radius;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 %button-base {
@@ -442,42 +474,42 @@ $transition-speed: 0.3s;
 // _buttons.scss
 .btn {
   @extend %button-base;
-  
+
   &-primary {
     @include button-variant($primary-color);
   }
-  
+
   &-secondary {
     @include button-variant($secondary-color);
   }
-  
+
   &-danger {
     @include button-variant($danger-color);
   }
-  
+
   &-warning {
     @include button-variant($warning-color);
   }
-  
+
   &-outline {
     background-color: transparent;
-    
+
     &-primary {
       color: $primary-color;
       border: 1px solid $primary-color;
-      
+
       &:hover {
         background-color: $primary-color;
         color: white;
       }
     }
   }
-  
+
   &-sm {
     padding: $base-padding / 2;
     font-size: 0.8em;
   }
-  
+
   &-lg {
     padding: $base-padding * 1.5;
     font-size: 1.2em;
@@ -488,29 +520,29 @@ $transition-speed: 0.3s;
 .card {
   @extend %card-base;
   background-color: white;
-  
+
   &__header {
     padding: $base-padding;
     border-bottom: 1px solid $light-gray;
   }
-  
+
   &__body {
     padding: $base-padding;
   }
-  
+
   &__footer {
     padding: $base-padding;
     border-top: 1px solid $light-gray;
     background-color: $light-gray;
   }
-  
+
   &--primary {
     .card__header {
       background-color: $primary-color;
       color: white;
     }
   }
-  
+
   &--flat {
     box-shadow: none;
     border: 1px solid $light-gray;
@@ -518,14 +550,14 @@ $transition-speed: 0.3s;
 }
 
 // main.scss
-@import 'variables';
-@import 'mixins';
-@import 'placeholders';
-@import 'buttons';
-@import 'cards';
+@import "variables";
+@import "mixins";
+@import "placeholders";
+@import "buttons";
+@import "cards";
 ```
 
-**HTML使用示例**:
+**HTML 使用示例**:
 
 ```html
 <button class="btn btn-primary">主要按钮</button>
@@ -554,4 +586,4 @@ $transition-speed: 0.3s;
 </div>
 ```
 
-这个组件库示例展示了如何使用Sass的变量、混合、占位符和继承来创建可复用、可维护的组件系统。
+这个组件库示例展示了如何使用 Sass 的变量、混合、占位符和继承来创建可复用、可维护的组件系统。

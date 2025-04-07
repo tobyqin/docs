@@ -1,4 +1,7 @@
-# 07_实用技巧与模式
+---
+type: docs
+title: "实用技巧与模式"
+---
 
 ## 常见布局实现
 
@@ -185,42 +188,74 @@ body {
 
 ## 组件设计思想
 
-### 组件化CSS原则
+### 组件化 CSS 原则
 
 1. **单一职责原则**：每个组件只负责一个功能
 2. **封装性**：组件内部样式不影响外部
 3. **可复用性**：组件可在不同场景重复使用
 4. **可组合性**：小组件可组合成更复杂的组件
 
-### 原子CSS方法
+### 原子 CSS 方法
 
-原子CSS是一种创建小型、单一用途类的方法。
+原子 CSS 是一种创建小型、单一用途类的方法。
 
 ```css
 /* 间距类 */
-.m-0 { margin: 0; }
-.m-1 { margin: 0.25rem; }
-.m-2 { margin: 0.5rem; }
-.m-3 { margin: 1rem; }
+.m-0 {
+  margin: 0;
+}
+.m-1 {
+  margin: 0.25rem;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-3 {
+  margin: 1rem;
+}
 
-.p-0 { padding: 0; }
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-3 { padding: 1rem; }
+.p-0 {
+  padding: 0;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-3 {
+  padding: 1rem;
+}
 
 /* 显示类 */
-.d-block { display: block; }
-.d-flex { display: flex; }
-.d-grid { display: grid; }
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
 
 /* 对齐类 */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 
 /* 颜色类 */
-.text-primary { color: #3498db; }
-.bg-primary { background-color: #3498db; }
+.text-primary {
+  color: #3498db;
+}
+.bg-primary {
+  background-color: #3498db;
+}
 ```
 
 使用原子类：
@@ -274,7 +309,7 @@ body {
 /* 容器 */
 .card {
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -311,7 +346,7 @@ body {
 
 ## 主题系统实现
 
-### 使用CSS变量的主题系统
+### 使用 CSS 变量的主题系统
 
 ```css
 /* 定义根变量 */
@@ -365,20 +400,20 @@ body {
 <button id="theme-toggle">切换主题</button>
 
 <script>
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('theme-dark');
-    
+  const themeToggle = document.getElementById("theme-toggle");
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("theme-dark");
+
     // 保存用户偏好
-    const isDarkTheme = document.body.classList.contains('theme-dark');
-    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+    const isDarkTheme = document.body.classList.contains("theme-dark");
+    localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
   });
-  
+
   // 加载保存的主题
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('theme-dark');
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("theme-dark");
     }
   });
 </script>
@@ -423,10 +458,14 @@ body {
 
 ```css
 /* 避免 */
-body div ul li a { ... } /* 过长的选择器链 */
+body div ul li a {
+  ...;
+} /* 过长的选择器链 */
 
 /* 推荐 */
-.nav-link { ... } /* 直接类选择器 */
+.nav-link {
+  ...;
+} /* 直接类选择器 */
 ```
 
 ### 减少重绘和回流
@@ -451,23 +490,33 @@ body div ul li a { ... } /* 过长的选择器链 */
 }
 ```
 
-### 使用transform和opacity进行动画
+### 使用 transform 和 opacity 进行动画
 
 ```css
 /* 避免 */
 @keyframes move-bad {
-  0% { left: 0; top: 0; }
-  100% { left: 100px; top: 100px; }
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 100px;
+    top: 100px;
+  }
 }
 
 /* 推荐 */
 @keyframes move-good {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(100px, 100px); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
 }
 ```
 
-### 使用will-change提示浏览器
+### 使用 will-change 提示浏览器
 
 ```css
 .animated-element {
@@ -479,8 +528,8 @@ body div ul li a { ... } /* 过长的选择器链 */
 
 ```css
 /* 避免 */
-@import url('typography.css');
-@import url('buttons.css');
+@import url("typography.css");
+@import url("buttons.css");
 
 /* 推荐 */
 /* 使用<link>标签在HTML中引入多个CSS文件 */
@@ -526,7 +575,7 @@ body div ul li a { ... } /* 过长的选择器链 */
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
@@ -539,7 +588,7 @@ body {
 
 .header {
   height: var(--nav-height);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   background-color: var(--bg-color);
@@ -577,7 +626,7 @@ body {
 }
 
 .nav__link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -618,7 +667,7 @@ body {
     display: block;
     z-index: 101;
   }
-  
+
   .nav {
     position: fixed;
     top: 0;
@@ -627,7 +676,7 @@ body {
     max-width: 300px;
     height: 100vh;
     background-color: var(--bg-color);
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 100;
@@ -635,28 +684,28 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   .nav.active {
     transform: translateX(0);
   }
-  
+
   .nav__list {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .nav__item {
     margin: 15px 0;
   }
-  
+
   .nav-toggle.active .nav-toggle__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  
+
   .nav-toggle.active .nav-toggle__bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .nav-toggle.active .nav-toggle__bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
@@ -664,24 +713,24 @@ body {
 ```
 
 ```javascript
-document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    nav.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    nav.classList.toggle("active");
   });
-  
+
   // 点击导航链接后关闭菜单
-  const navLinks = document.querySelectorAll('.nav__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.classList.remove('active');
-      nav.classList.remove('active');
+  const navLinks = document.querySelectorAll(".nav__link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navToggle.classList.remove("active");
+      nav.classList.remove("active");
     });
   });
 });
 ```
 
-这个响应式导航栏示例展示了如何结合CSS和JavaScript创建在桌面和移动设备上都能良好工作的导航组件。它使用了CSS变量、Flexbox布局、过渡动画和媒体查询等技术。
+这个响应式导航栏示例展示了如何结合 CSS 和 JavaScript 创建在桌面和移动设备上都能良好工作的导航组件。它使用了 CSS 变量、Flexbox 布局、过渡动画和媒体查询等技术。
