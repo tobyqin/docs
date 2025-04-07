@@ -17,5 +17,29 @@ graph LR
 >
 > 备用链接：<https://tobyqin.github.io/docs>
 
+## 本地运行
+
+1. 安装 Hugo
+   ```bash
+   # Mac
+   brew install hugo
+   
+   # Windows
+   choco install hugo
+   ```
+
+2. 克隆仓库
+   ```bash
+   git clone https://github.com/tobyqin/docs.git
+   cd docs
+   ```
+
+3. 启动本地服务器
+   ```bash
+   hugo server -D
+   ```
+
+4. 访问 <http://localhost:1313/docs>
+
 ---
 转载内容请注明出处，谢谢。
