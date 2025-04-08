@@ -6,13 +6,13 @@ A hello world guide to play with k8s.
 
 My name is Toby Qin, I am a DevOps engineer working with containerization technology everyday. I had passed my [Certified kubernetes Application Developer](https://www.cncf.io/certification/ckad/) exam few weeks ago. I create this repo to guide newbies hit their road to cloud.
 
-![ckad](images/ckad.png ':size=600')
+![ckad](images/ckad.png)
 
 Welcome to follow me on [github](https://github.com/tobyqin).
 
 ## Video recording
 
-![workshop](images/workshop-intro.png ':size=600')
+![workshop](images/workshop-intro.png)
 
 针对 Workshop 设计的所有任务，我专门录制了操作视频，欢迎通过以下链接访问获得。
 

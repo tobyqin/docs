@@ -8,7 +8,7 @@ In this page, we will introduce core concepts in k8s.
 
 ## Kubernetes Architecture
 
-![k8s](images/k8s-architecture.png ':size=600')
+![k8s](images/k8s-architecture.png)
 
 ### Control Plane (master node)
 
@@ -58,21 +58,21 @@ spec:
 
 ## Pod
 
-![pod-in-node](images/pod-in-node.png ':size=600')
+![pod-in-node](images/pod-in-node.png)
 
 Inside of a node, you have one or more pods. Pods are the deployable units in Kubernetes. It is the most basic building block of deployment within Kubernetes. Think of a pod as the unit component of compute workload. The pod indicates which containers you are going to run as a unit.
 
 **Pod overview**
 
-![pod overview](images/pod-overview.png ':size=600')
+![pod overview](images/pod-overview.png)
 
 **Pod lifecycle**
 
-![pod lifecycle](images/pod-lifecycle.png ':size=600')
+![pod lifecycle](images/pod-lifecycle.png)
 
 **Pod design pattern**
 
-![pod design](images/pod-design.png ':size=600')
+![pod design](images/pod-design.png)
 
 ## Job
 
@@ -82,25 +82,25 @@ One `CronJob` object is like one line of a `crontab` (cron table) file. It runs 
 
 ## ReplicaSet
 
-![ReplicaSet](images/replica-set.png ':size=600')
+![ReplicaSet](images/replica-set.png)
 
 Pods are created by a ReplicaSet. A ReplicaSet indicates N number of replicas, minimum and maximum. For example, ReplicaSet decides where to put 10 replicas of a container image running and how to distribute the deployment and the traffic. ReplicaSet is at the pod level and delegates local container restarts to the `kubelet`.
 
 ## Deployment
 
-![deployment](images/deployment.png ':size=600')
+![deployment](images/deployment.png)
 
 Manages the lifecycle of a ReplicaSet.
 
 ## Service
 
-![service](images/service.png ':size=600')
+![service](images/service.png)
 
 A service gives you one entry point into a variable number of pods. Services can be exposed outside the cluster through an external LoadBalancer. All public cloud managed Kubernetes services automate the creation of native load balancers for your services.
 
 ## Persistent Volume
 
-![Persistent volume](images/pv.png ':size=600')
+![Persistent volume](images/pv.png)
 
 A `PersistentVolume` (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes.
 
