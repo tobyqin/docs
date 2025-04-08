@@ -1,4 +1,8 @@
-# Python Workshop Exam
+---
+type: docs
+title: "Python Workshop Exam"
+weight: 2
+---
 
 {{% callout note %}}
 悄悄滴进村，打枪的不要。

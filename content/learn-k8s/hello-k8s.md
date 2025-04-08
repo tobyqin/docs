@@ -1,4 +1,8 @@
-# hello-k8s
+---
+type: docs
+title: "Hello Kubernetes"
+weight: 1
+---
 
 A hello world guide to play with k8s.
 
