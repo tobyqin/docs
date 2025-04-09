@@ -2,7 +2,7 @@
 
 我会在这里随便放一些文档，不定期更新。
 
-![doggy](assets/dog.png)
+![doggy](static/images/dog.png)
 
 ```mermaid
 graph LR
